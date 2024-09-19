@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EkDers.Core\EkDers.Core.csproj" />
+    <ProjectReference Include="..\EkDers.Data\EkDers.Data.csproj" />
+    <ProjectReference Include="..\EkDers.Entity\EkDers.Entity.csproj" />
+  </ItemGroup>
+
+</Project>
