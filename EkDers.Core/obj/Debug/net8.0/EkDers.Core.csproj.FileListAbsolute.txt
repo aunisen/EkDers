@@ -1,0 +1,12 @@
+C:\Projeler\EkDers\EkDers.Core\bin\Debug\net8.0\EkDers.Core.deps.json
+C:\Projeler\EkDers\EkDers.Core\bin\Debug\net8.0\EkDers.Core.dll
+C:\Projeler\EkDers\EkDers.Core\bin\Debug\net8.0\EkDers.Core.pdb
+C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\EkDers.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\EkDers.Core.AssemblyInfoInputs.cache
+C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\EkDers.Core.AssemblyInfo.cs
+C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\EkDers.Core.csproj.CoreCompileInputs.cache
+C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\EkDers.Core.sourcelink.json
+C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\EkDers.Core.dll
+C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\refint\EkDers.Core.dll
+C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\EkDers.Core.pdb
+C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\ref\EkDers.Core.dll
