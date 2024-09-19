@@ -31,7 +31,6 @@ namespace EkDers.Entity.DbEntity
 
         public Guid PersonelId { get; set; } 
         public Personel Personel { get; set; }
-
-        public ICollection<EkdersResult> EkDersResults { get; set; }
+         
     }
 }

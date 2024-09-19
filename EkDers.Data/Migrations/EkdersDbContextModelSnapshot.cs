@@ -219,9 +219,6 @@ namespace EkDers.Data.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<Guid?>("IzinId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("KodId")
                         .HasColumnType("uniqueidentifier");
 
@@ -231,8 +228,6 @@ namespace EkDers.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("DonemId");
-
-                    b.HasIndex("IzinId");
 
                     b.HasIndex("KodId");
 
@@ -266,35 +261,35 @@ namespace EkDers.Data.Migrations
                         new
                         {
                             Id = new Guid("0c30e774-4b13-4ec4-b354-157728ffb11c"),
-                            CreateDate = new DateTime(2024, 9, 19, 16, 33, 30, 61, DateTimeKind.Local).AddTicks(7884),
+                            CreateDate = new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9151),
                             GorevAd = "Müdür",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("3b4dcbef-c723-40be-b73e-19cd09604c59"),
-                            CreateDate = new DateTime(2024, 9, 19, 16, 33, 30, 61, DateTimeKind.Local).AddTicks(7906),
+                            CreateDate = new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9169),
                             GorevAd = "Müdür Yardımcısı",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("35084397-55c0-47bb-b1fe-17f02ff27601"),
-                            CreateDate = new DateTime(2024, 9, 19, 16, 33, 30, 61, DateTimeKind.Local).AddTicks(7908),
+                            CreateDate = new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9186),
                             GorevAd = "Öğretmen",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("9b12ff59-0858-4fa2-9c20-f1ecd1c60098"),
-                            CreateDate = new DateTime(2024, 9, 19, 16, 33, 30, 61, DateTimeKind.Local).AddTicks(7909),
+                            CreateDate = new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9187),
                             GorevAd = "Uzman Öğretmen",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("ac86700e-3f47-4b67-b0cd-06c038065ca7"),
-                            CreateDate = new DateTime(2024, 9, 19, 16, 33, 30, 61, DateTimeKind.Local).AddTicks(7910),
+                            CreateDate = new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9189),
                             GorevAd = "Baş Öğretmen",
                             IsDeleted = false
                         });
@@ -483,10 +478,6 @@ namespace EkDers.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("EkDers.Entity.DbEntity.Izin", null)
-                        .WithMany("EkDersResults")
-                        .HasForeignKey("IzinId");
-
                     b.HasOne("EkDers.Entity.DbEntity.EkdersKodu", "Kod")
                         .WithMany("EkdersResults")
                         .HasForeignKey("KodId")
@@ -562,11 +553,6 @@ namespace EkDers.Data.Migrations
             modelBuilder.Entity("EkDers.Entity.DbEntity.Gorev", b =>
                 {
                     b.Navigation("Personels");
-                });
-
-            modelBuilder.Entity("EkDers.Entity.DbEntity.Izin", b =>
-                {
-                    b.Navigation("EkDersResults");
                 });
 
             modelBuilder.Entity("EkDers.Entity.DbEntity.IzinTuru", b =>

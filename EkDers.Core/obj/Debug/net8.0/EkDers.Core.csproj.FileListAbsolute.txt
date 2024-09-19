@@ -10,3 +10,15 @@ C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\EkDers.Core.dll
 C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\refint\EkDers.Core.dll
 C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\EkDers.Core.pdb
 C:\Projeler\EkDers\EkDers.Core\obj\Debug\net8.0\ref\EkDers.Core.dll
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\bin\Debug\net8.0\EkDers.Core.deps.json
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\bin\Debug\net8.0\EkDers.Core.dll
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\bin\Debug\net8.0\EkDers.Core.pdb
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\obj\Debug\net8.0\EkDers.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\obj\Debug\net8.0\EkDers.Core.AssemblyInfoInputs.cache
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\obj\Debug\net8.0\EkDers.Core.AssemblyInfo.cs
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\obj\Debug\net8.0\EkDers.Core.csproj.CoreCompileInputs.cache
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\obj\Debug\net8.0\EkDers.Core.sourcelink.json
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\obj\Debug\net8.0\EkDers.Core.dll
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\obj\Debug\net8.0\refint\EkDers.Core.dll
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\obj\Debug\net8.0\EkDers.Core.pdb
+C:\ProjectsCSharp\EkDers\EkDersProjesi\EkDers.Core\obj\Debug\net8.0\ref\EkDers.Core.dll

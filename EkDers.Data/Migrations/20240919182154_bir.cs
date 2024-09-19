@@ -155,37 +155,6 @@ namespace EkDers.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Izin",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    BaslagicTarihi = table.Column<DateOnly>(type: "date", nullable: false),
-                    GunSayisi = table.Column<int>(type: "int", nullable: false),
-                    Aciklama = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    EkDerskesilecekmi = table.Column<bool>(type: "bit", nullable: false),
-                    IzinTuruId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    PersonelId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Izin", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Izin_IzinTuru_IzinTuruId",
-                        column: x => x.IzinTuruId,
-                        principalTable: "IzinTuru",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        name: "FK_Izin_Personel_PersonelId",
-                        column: x => x.PersonelId,
-                        principalTable: "Personel",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "EkdersResult",
                 columns: table => new
                 {
@@ -224,7 +193,6 @@ namespace EkDers.Data.Migrations
                     Gun28 = table.Column<int>(type: "int", nullable: false),
                     Gun29 = table.Column<int>(type: "int", nullable: false),
                     Gun30 = table.Column<int>(type: "int", nullable: false),
-                    IzinId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false)
                 },
@@ -244,12 +212,38 @@ namespace EkDers.Data.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_EkdersResult_Izin_IzinId",
-                        column: x => x.IzinId,
-                        principalTable: "Izin",
-                        principalColumn: "Id");
-                    table.ForeignKey(
                         name: "FK_EkdersResult_Personel_PersonelId",
+                        column: x => x.PersonelId,
+                        principalTable: "Personel",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Izin",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    BaslagicTarihi = table.Column<DateOnly>(type: "date", nullable: false),
+                    GunSayisi = table.Column<int>(type: "int", nullable: false),
+                    Aciklama = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
+                    EkDerskesilecekmi = table.Column<bool>(type: "bit", nullable: false),
+                    IzinTuruId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    PersonelId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreateDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Izin", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Izin_IzinTuru_IzinTuruId",
+                        column: x => x.IzinTuruId,
+                        principalTable: "IzinTuru",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Izin_Personel_PersonelId",
                         column: x => x.PersonelId,
                         principalTable: "Personel",
                         principalColumn: "Id",
@@ -261,22 +255,17 @@ namespace EkDers.Data.Migrations
                 columns: new[] { "Id", "CreateDate", "GorevAd", "IsDeleted" },
                 values: new object[,]
                 {
-                    { new Guid("0c30e774-4b13-4ec4-b354-157728ffb11c"), new DateTime(2024, 9, 19, 16, 33, 30, 61, DateTimeKind.Local).AddTicks(7884), "Müdür", false },
-                    { new Guid("35084397-55c0-47bb-b1fe-17f02ff27601"), new DateTime(2024, 9, 19, 16, 33, 30, 61, DateTimeKind.Local).AddTicks(7908), "Öğretmen", false },
-                    { new Guid("3b4dcbef-c723-40be-b73e-19cd09604c59"), new DateTime(2024, 9, 19, 16, 33, 30, 61, DateTimeKind.Local).AddTicks(7906), "Müdür Yardımcısı", false },
-                    { new Guid("9b12ff59-0858-4fa2-9c20-f1ecd1c60098"), new DateTime(2024, 9, 19, 16, 33, 30, 61, DateTimeKind.Local).AddTicks(7909), "Uzman Öğretmen", false },
-                    { new Guid("ac86700e-3f47-4b67-b0cd-06c038065ca7"), new DateTime(2024, 9, 19, 16, 33, 30, 61, DateTimeKind.Local).AddTicks(7910), "Baş Öğretmen", false }
+                    { new Guid("0c30e774-4b13-4ec4-b354-157728ffb11c"), new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9151), "Müdür", false },
+                    { new Guid("35084397-55c0-47bb-b1fe-17f02ff27601"), new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9186), "Öğretmen", false },
+                    { new Guid("3b4dcbef-c723-40be-b73e-19cd09604c59"), new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9169), "Müdür Yardımcısı", false },
+                    { new Guid("9b12ff59-0858-4fa2-9c20-f1ecd1c60098"), new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9187), "Uzman Öğretmen", false },
+                    { new Guid("ac86700e-3f47-4b67-b0cd-06c038065ca7"), new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9189), "Baş Öğretmen", false }
                 });
 
             migrationBuilder.CreateIndex(
                 name: "IX_EkdersResult_DonemId",
                 table: "EkdersResult",
                 column: "DonemId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_EkdersResult_IzinId",
-                table: "EkdersResult",
-                column: "IzinId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_EkdersResult_KodId",
@@ -316,6 +305,9 @@ namespace EkDers.Data.Migrations
                 name: "EkdersResult");
 
             migrationBuilder.DropTable(
+                name: "Izin");
+
+            migrationBuilder.DropTable(
                 name: "KurumBilgi");
 
             migrationBuilder.DropTable(
@@ -326,9 +318,6 @@ namespace EkDers.Data.Migrations
 
             migrationBuilder.DropTable(
                 name: "EkdersKodu");
-
-            migrationBuilder.DropTable(
-                name: "Izin");
 
             migrationBuilder.DropTable(
                 name: "IzinTuru");

@@ -39,10 +39,10 @@ namespace EkDers.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string _connectionStringLocalDb = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EkdersDbV1; Integrated Security=True";
-            string _connectionStringSqlServer = @"Data Source=.;Initial Catalog=EkdersDbV1; Integrated Security=True";
+            string _connectionStringLocalDb = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EkdersDbV1; Integrated Security=True;Trusted_Certificate=True";
+            string _connectionStringSqlServer = @"Data Source=.;Initial Catalog=EkdersDbV1; Integrated Security=True; TrustServerCertificate=True;";
           
-            optionsBuilder.UseSqlServer(_connectionStringLocalDb);
+            optionsBuilder.UseSqlServer(_connectionStringSqlServer);
             
         }
 
