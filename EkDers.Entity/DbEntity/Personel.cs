@@ -18,5 +18,8 @@ namespace EkDers.Entity.DbEntity
         public Gorev Gorev { get; set; }
         public Guid BransId { get; set; }
         public Brans Brans { get; set; }
+
+        public ICollection<OgretmenHaftalikDersProgrami> Programs { get; set; }
+        public ICollection<EkdersResult> EkdersResults { get; set; }
     }
 }

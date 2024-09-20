@@ -26,6 +26,7 @@ namespace EkDers.Data.Context
             modelBuilder.Entity<KurumBilgi>().ToTable("KurumBilgi");
             modelBuilder.Entity<Personel>().ToTable("Personel");
             modelBuilder.Entity<Tatil>().ToTable("Tatil");
+            modelBuilder.Entity<OgretmenHaftalikDersProgrami>().ToTable("OgretmenHaftalikDersProgrami");
 
 
             
@@ -57,5 +58,6 @@ namespace EkDers.Data.Context
         public DbSet<KurumBilgi> KurumBilgileri { get; set; }
         public DbSet<Personel> Personeller { get; set; }
         public DbSet<Tatil> Tatiller { get; set; }
+        public DbSet<OgretmenHaftalikDersProgrami> OgretmenDersProgramlari { get; set; }
     }
 }

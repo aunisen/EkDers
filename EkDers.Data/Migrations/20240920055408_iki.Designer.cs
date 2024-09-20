@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EkDers.Data.Migrations
 {
     [DbContext(typeof(EkdersDbContext))]
-    [Migration("20240919182154_bir")]
-    partial class bir
+    [Migration("20240920055408_iki")]
+    partial class iki
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -264,35 +264,35 @@ namespace EkDers.Data.Migrations
                         new
                         {
                             Id = new Guid("0c30e774-4b13-4ec4-b354-157728ffb11c"),
-                            CreateDate = new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9151),
+                            CreateDate = new DateTime(2024, 9, 20, 8, 54, 7, 838, DateTimeKind.Local).AddTicks(8380),
                             GorevAd = "Müdür",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("3b4dcbef-c723-40be-b73e-19cd09604c59"),
-                            CreateDate = new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9169),
+                            CreateDate = new DateTime(2024, 9, 20, 8, 54, 7, 838, DateTimeKind.Local).AddTicks(8391),
                             GorevAd = "Müdür Yardımcısı",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("35084397-55c0-47bb-b1fe-17f02ff27601"),
-                            CreateDate = new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9186),
+                            CreateDate = new DateTime(2024, 9, 20, 8, 54, 7, 838, DateTimeKind.Local).AddTicks(8392),
                             GorevAd = "Öğretmen",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("9b12ff59-0858-4fa2-9c20-f1ecd1c60098"),
-                            CreateDate = new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9187),
+                            CreateDate = new DateTime(2024, 9, 20, 8, 54, 7, 838, DateTimeKind.Local).AddTicks(8394),
                             GorevAd = "Uzman Öğretmen",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("ac86700e-3f47-4b67-b0cd-06c038065ca7"),
-                            CreateDate = new DateTime(2024, 9, 19, 21, 21, 54, 199, DateTimeKind.Local).AddTicks(9189),
+                            CreateDate = new DateTime(2024, 9, 20, 8, 54, 7, 838, DateTimeKind.Local).AddTicks(8395),
                             GorevAd = "Baş Öğretmen",
                             IsDeleted = false
                         });
