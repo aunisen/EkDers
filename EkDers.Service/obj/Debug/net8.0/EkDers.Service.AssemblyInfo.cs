@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EkDers.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+454f4e346dd03e69c23d242b2abeb859ec78a513")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3faa1248fc02db77ed8dbc6e9ced446fab4aeeb7")]
 [assembly: System.Reflection.AssemblyProductAttribute("EkDers.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EkDers.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

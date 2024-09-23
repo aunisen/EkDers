@@ -28,7 +28,7 @@ namespace EkDers.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("BransAdi")
+                    b.Property<string>("BransAd")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -53,7 +53,7 @@ namespace EkDers.Data.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("DonemAdi")
+                    b.Property<string>("DonemAd")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -102,138 +102,12 @@ namespace EkDers.Data.Migrations
 
                     b.Property<string>("Kodu")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(10)
+                        .HasColumnType("nvarchar(10)");
 
                     b.HasKey("Id");
 
                     b.ToTable("EkdersKodu", (string)null);
-                });
-
-            modelBuilder.Entity("EkDers.Entity.DbEntity.EkdersResult", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Data")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("DonemId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("Gun0")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun10")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun11")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun13")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun14")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun15")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun16")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun17")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun18")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun19")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun2")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun20")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun21")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun22")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun23")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun24")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun25")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun26")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun27")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun28")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun29")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun3")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun30")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun4")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun5")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun6")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun7")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun8")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Gun9")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid>("KodId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("PersonelId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("DonemId");
-
-                    b.HasIndex("KodId");
-
-                    b.HasIndex("PersonelId");
-
-                    b.ToTable("EkdersResult", (string)null);
                 });
 
             modelBuilder.Entity("EkDers.Entity.DbEntity.Gorev", b =>
@@ -261,79 +135,24 @@ namespace EkDers.Data.Migrations
                         new
                         {
                             Id = new Guid("0c30e774-4b13-4ec4-b354-157728ffb11c"),
-                            CreateDate = new DateTime(2024, 9, 20, 8, 54, 7, 838, DateTimeKind.Local).AddTicks(8380),
+                            CreateDate = new DateTime(2024, 9, 23, 15, 42, 43, 366, DateTimeKind.Local).AddTicks(6469),
                             GorevAd = "Müdür",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("3b4dcbef-c723-40be-b73e-19cd09604c59"),
-                            CreateDate = new DateTime(2024, 9, 20, 8, 54, 7, 838, DateTimeKind.Local).AddTicks(8391),
+                            CreateDate = new DateTime(2024, 9, 23, 15, 42, 43, 366, DateTimeKind.Local).AddTicks(6488),
                             GorevAd = "Müdür Yardımcısı",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("35084397-55c0-47bb-b1fe-17f02ff27601"),
-                            CreateDate = new DateTime(2024, 9, 20, 8, 54, 7, 838, DateTimeKind.Local).AddTicks(8392),
+                            CreateDate = new DateTime(2024, 9, 23, 15, 42, 43, 366, DateTimeKind.Local).AddTicks(6489),
                             GorevAd = "Öğretmen",
                             IsDeleted = false
-                        },
-                        new
-                        {
-                            Id = new Guid("9b12ff59-0858-4fa2-9c20-f1ecd1c60098"),
-                            CreateDate = new DateTime(2024, 9, 20, 8, 54, 7, 838, DateTimeKind.Local).AddTicks(8394),
-                            GorevAd = "Uzman Öğretmen",
-                            IsDeleted = false
-                        },
-                        new
-                        {
-                            Id = new Guid("ac86700e-3f47-4b67-b0cd-06c038065ca7"),
-                            CreateDate = new DateTime(2024, 9, 20, 8, 54, 7, 838, DateTimeKind.Local).AddTicks(8395),
-                            GorevAd = "Baş Öğretmen",
-                            IsDeleted = false
                         });
-                });
-
-            modelBuilder.Entity("EkDers.Entity.DbEntity.Izin", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Aciklama")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<DateOnly>("BaslagicTarihi")
-                        .HasColumnType("date");
-
-                    b.Property<DateTime>("CreateDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("EkDerskesilecekmi")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("GunSayisi")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid>("IzinTuruId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("PersonelId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IzinTuruId");
-
-                    b.HasIndex("PersonelId");
-
-                    b.ToTable("Izin", (string)null);
                 });
 
             modelBuilder.Entity("EkDers.Entity.DbEntity.IzinTuru", b =>
@@ -348,6 +167,10 @@ namespace EkDers.Data.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("RaporKodu")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TurAdi")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -358,11 +181,42 @@ namespace EkDers.Data.Migrations
                     b.ToTable("IzinTuru", (string)null);
                 });
 
+            modelBuilder.Entity("EkDers.Entity.DbEntity.KariyerBasamagi", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Aciklama")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("Ad")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("KariyerBasamagi", (string)null);
+                });
+
             modelBuilder.Entity("EkDers.Entity.DbEntity.KurumBilgi", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Aciklama")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
@@ -385,7 +239,33 @@ namespace EkDers.Data.Migrations
                     b.ToTable("KurumBilgi", (string)null);
                 });
 
-            modelBuilder.Entity("EkDers.Entity.DbEntity.Personel", b =>
+            modelBuilder.Entity("EkDers.Entity.DbEntity.MezuniyetTuru", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("MezuniyetTurAd")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("OdemeKodu")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MezuniyetTuru", (string)null);
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.Ogretmen", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -402,11 +282,22 @@ namespace EkDers.Data.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
                     b.Property<Guid>("GorevId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<Guid>("KariyerBasamagiId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("MezuniyetTuruId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Soyad")
                         .IsRequired()
@@ -415,13 +306,13 @@ namespace EkDers.Data.Migrations
 
                     b.Property<string>("TCKN")
                         .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasMaxLength(11)
+                        .HasColumnType("nvarchar(11)");
 
                     b.Property<string>("Telefon")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 
@@ -429,7 +320,237 @@ namespace EkDers.Data.Migrations
 
                     b.HasIndex("GorevId");
 
-                    b.ToTable("Personel", (string)null);
+                    b.HasIndex("KariyerBasamagiId");
+
+                    b.HasIndex("MezuniyetTuruId");
+
+                    b.ToTable("Ogretmen", (string)null);
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.OgretmenIzin", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Aciklama")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateOnly>("BaslagicTarihi")
+                        .HasColumnType("date");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("GunSayisi")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("IzinTuruId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("OdenecekEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("OgretmenId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IzinTuruId");
+
+                    b.HasIndex("OgretmenId");
+
+                    b.ToTable("OgretmenIzin", (string)null);
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.OgretmenProgram", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("CarsambaDersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CarsambaEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CarsambaYazilacakEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CumaDersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CumaEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CumaYazilacakEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CumartesiDersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CumartesiEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CumartesiYazilacakEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DerseHazrilikEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("EkdersKoduId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("NobetEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NobetGunIndex")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("NobetTutuyormu")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("OgretmenId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("PazarDersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PazarEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PazarYazilacakEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PazartesiDersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PazartesiEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PazartesiYazilacakEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PersembeDersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PersembeEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PersembeYazilacakEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("ProgramGroupId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("SaliDersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SaliEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SaliYazilacakEkdersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SinifOgremenligiKlupDersSaati")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("SinifOgremenligiKlupGoreviVarmi")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EkdersKoduId");
+
+                    b.HasIndex("OgretmenId");
+
+                    b.HasIndex("ProgramGroupId");
+
+                    b.ToTable("OgretmenProgram", (string)null);
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.ProgramGroup", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Aciklama")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateOnly>("BaslangicTarihi")
+                        .HasColumnType("date");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("GroupAd")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ProgramGroup", (string)null);
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.RaporItem", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<byte[]>("Data")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
+
+                    b.Property<Guid>("DonemId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("GunSayisi")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("KodId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("OgretmenId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Toplam")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("DonemId");
+
+                    b.HasIndex("KodId");
+
+                    b.HasIndex("OgretmenId");
+
+                    b.ToTable("RaporItem", (string)null);
                 });
 
             modelBuilder.Entity("EkDers.Entity.DbEntity.Tatil", b =>
@@ -453,6 +574,10 @@ namespace EkDers.Data.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("RaporKodu")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("TatilAd")
                         .IsRequired()
                         .HasMaxLength(500)
@@ -470,56 +595,10 @@ namespace EkDers.Data.Migrations
                     b.ToTable("Tatil", (string)null);
                 });
 
-            modelBuilder.Entity("EkDers.Entity.DbEntity.EkdersResult", b =>
-                {
-                    b.HasOne("EkDers.Entity.DbEntity.Donem", "Donem")
-                        .WithMany("EkdersResults")
-                        .HasForeignKey("DonemId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EkDers.Entity.DbEntity.EkdersKodu", "Kod")
-                        .WithMany("EkdersResults")
-                        .HasForeignKey("KodId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EkDers.Entity.DbEntity.Personel", "Personel")
-                        .WithMany()
-                        .HasForeignKey("PersonelId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Donem");
-
-                    b.Navigation("Kod");
-
-                    b.Navigation("Personel");
-                });
-
-            modelBuilder.Entity("EkDers.Entity.DbEntity.Izin", b =>
-                {
-                    b.HasOne("EkDers.Entity.DbEntity.IzinTuru", "IzinTuru")
-                        .WithMany("Izins")
-                        .HasForeignKey("IzinTuruId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("EkDers.Entity.DbEntity.Personel", "Personel")
-                        .WithMany()
-                        .HasForeignKey("PersonelId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("IzinTuru");
-
-                    b.Navigation("Personel");
-                });
-
-            modelBuilder.Entity("EkDers.Entity.DbEntity.Personel", b =>
+            modelBuilder.Entity("EkDers.Entity.DbEntity.Ogretmen", b =>
                 {
                     b.HasOne("EkDers.Entity.DbEntity.Brans", "Brans")
-                        .WithMany("Personels")
+                        .WithMany("Ogretmens")
                         .HasForeignKey("BransId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -530,14 +609,103 @@ namespace EkDers.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("EkDers.Entity.DbEntity.KariyerBasamagi", "KariyerBasamagi")
+                        .WithMany("Ogretmens")
+                        .HasForeignKey("KariyerBasamagiId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EkDers.Entity.DbEntity.MezuniyetTuru", "MezuniyetTuru")
+                        .WithMany("Ogretmens")
+                        .HasForeignKey("MezuniyetTuruId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Brans");
 
                     b.Navigation("Gorev");
+
+                    b.Navigation("KariyerBasamagi");
+
+                    b.Navigation("MezuniyetTuru");
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.OgretmenIzin", b =>
+                {
+                    b.HasOne("EkDers.Entity.DbEntity.IzinTuru", "IzinTuru")
+                        .WithMany("Izins")
+                        .HasForeignKey("IzinTuruId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EkDers.Entity.DbEntity.Ogretmen", "Ogretmen")
+                        .WithMany("OgretmenIzins")
+                        .HasForeignKey("OgretmenId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("IzinTuru");
+
+                    b.Navigation("Ogretmen");
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.OgretmenProgram", b =>
+                {
+                    b.HasOne("EkDers.Entity.DbEntity.EkdersKodu", "EkdersKodu")
+                        .WithMany("OgretmenPrograms")
+                        .HasForeignKey("EkdersKoduId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EkDers.Entity.DbEntity.Ogretmen", "Ogretmen")
+                        .WithMany("Programs")
+                        .HasForeignKey("OgretmenId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EkDers.Entity.DbEntity.ProgramGroup", "ProgramGroup")
+                        .WithMany("OgretmenPrograms")
+                        .HasForeignKey("ProgramGroupId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("EkdersKodu");
+
+                    b.Navigation("Ogretmen");
+
+                    b.Navigation("ProgramGroup");
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.RaporItem", b =>
+                {
+                    b.HasOne("EkDers.Entity.DbEntity.Donem", "Donem")
+                        .WithMany("EkdersResults")
+                        .HasForeignKey("DonemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EkDers.Entity.DbEntity.EkdersKodu", "Kod")
+                        .WithMany()
+                        .HasForeignKey("KodId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("EkDers.Entity.DbEntity.Ogretmen", "Ogretmen")
+                        .WithMany("EkdersResults")
+                        .HasForeignKey("OgretmenId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Donem");
+
+                    b.Navigation("Kod");
+
+                    b.Navigation("Ogretmen");
                 });
 
             modelBuilder.Entity("EkDers.Entity.DbEntity.Brans", b =>
                 {
-                    b.Navigation("Personels");
+                    b.Navigation("Ogretmens");
                 });
 
             modelBuilder.Entity("EkDers.Entity.DbEntity.Donem", b =>
@@ -547,7 +715,7 @@ namespace EkDers.Data.Migrations
 
             modelBuilder.Entity("EkDers.Entity.DbEntity.EkdersKodu", b =>
                 {
-                    b.Navigation("EkdersResults");
+                    b.Navigation("OgretmenPrograms");
                 });
 
             modelBuilder.Entity("EkDers.Entity.DbEntity.Gorev", b =>
@@ -558,6 +726,30 @@ namespace EkDers.Data.Migrations
             modelBuilder.Entity("EkDers.Entity.DbEntity.IzinTuru", b =>
                 {
                     b.Navigation("Izins");
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.KariyerBasamagi", b =>
+                {
+                    b.Navigation("Ogretmens");
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.MezuniyetTuru", b =>
+                {
+                    b.Navigation("Ogretmens");
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.Ogretmen", b =>
+                {
+                    b.Navigation("EkdersResults");
+
+                    b.Navigation("OgretmenIzins");
+
+                    b.Navigation("Programs");
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.ProgramGroup", b =>
+                {
+                    b.Navigation("OgretmenPrograms");
                 });
 #pragma warning restore 612, 618
         }

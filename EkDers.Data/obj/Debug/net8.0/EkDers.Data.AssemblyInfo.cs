@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EkDers.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7da12200aa52eff2d575ba87602af2f24a4b3faa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3faa1248fc02db77ed8dbc6e9ced446fab4aeeb7")]
 [assembly: System.Reflection.AssemblyProductAttribute("EkDers.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EkDers.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

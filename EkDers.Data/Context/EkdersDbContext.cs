@@ -43,8 +43,8 @@ namespace EkDers.Data.Context
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string _connectionStringLocalDb = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EkdersDbV1; Integrated Security=True;Trusted_Certificate=True";
-            string _connectionStringSqlServer = @"Data Source=.;Initial Catalog=EkdersDbV1; Integrated Security=True; TrustServerCertificate=True;";
+            string _connectionStringLocalDb = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EkdersDbV2; Integrated Security=True;Trusted_Certificate=True";
+            string _connectionStringSqlServer = @"Data Source=.;Initial Catalog=EkdersDbV2; Integrated Security=True; TrustServerCertificate=True;";
           
             optionsBuilder.UseSqlServer(_connectionStringSqlServer);
             
@@ -54,13 +54,18 @@ namespace EkDers.Data.Context
         public DbSet<Brans> Branslar { get; set; }
         public DbSet<Donem> Donemler { get; set; }
         public DbSet<EkdersKodu> EkDersKodlari { get; set; }
-        public DbSet<RaporItem> EkDersResults { get; set; }
+        public DbSet<RaporItem> RaporItemlar { get; set; }
         public DbSet<Gorev> Gorevler { get; set; }
-        public DbSet<OgretmenIzin> Izinler { get; set; }
+        public DbSet<OgretmenIzin> OgretmenIzinleri { get; set; }
         public DbSet<IzinTuru> IzinTurleri { get; set; }
         public DbSet<KurumBilgi> KurumBilgileri { get; set; }
-        public DbSet<Ogretmen> Personeller { get; set; }
+        public DbSet<Ogretmen> Ogretmenler { get; set; }
+        public DbSet<OgretmenProgram> OgretmenProgramlari { get; set; }
+        public DbSet<KariyerBasamagi> KariyerBasamaglari { get; set; }
         public DbSet<Tatil> Tatiller { get; set; }
+        public DbSet<ProgramGroup> ProgramGrouplari { get; set; }
+        public DbSet<MezuniyetTuru> MezuniyetTurleri { get; set; }
+
 
         }
 }
