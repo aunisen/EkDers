@@ -20,4 +20,13 @@
     <ProjectReference Include="..\EkDers.Service\EkDers.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="DevExpress.Utils.v22.2">
+      <HintPath>..\..\..\Program Files\DevExpress 22.2\Components\Bin\Framework\DevExpress.Utils.v22.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v22.2.UI">
+      <HintPath>..\..\..\Program Files\DevExpress 22.2\Components\Bin\Framework\DevExpress.Utils.v22.2.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

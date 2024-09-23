@@ -20,6 +20,7 @@ namespace EkDers.Win
         public frmMain()
         {
             InitializeComponent();
+            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(skinName: "WXI Compact", DevExpress.LookAndFeel.WXICompact.WXICompact);
         }
 
         private void barButtonItemYeniGorev_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
