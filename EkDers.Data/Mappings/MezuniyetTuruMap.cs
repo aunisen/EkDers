@@ -1,7 +1,6 @@
 ﻿using EkDers.Entity.DbEntity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.IdentityModel.Protocols;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,12 +9,13 @@ using System.Threading.Tasks;
 
 namespace EkDers.Data.Mappings
 {
-    public class EkdersResultMap : IEntityTypeConfiguration<EkdersResult>
+    public class MezuniyetTuruMap : IEntityTypeConfiguration<MezuniyetTuru>
     {
-        public void Configure(EntityTypeBuilder<EkdersResult> builder)
+        public void Configure(EntityTypeBuilder<MezuniyetTuru> builder)
         {
             builder.HasKey(x => x.Id);
-
+            builder.Property(x=>x.MezuniyetTurAd).HasMaxLength(100);
+            
         }
     }
 }

@@ -10,6 +10,7 @@ namespace EkDers.Entity.DbEntity
     public class IzinTuru:DbEntityBase
     {
         public string TurAdi { get; set; }
+        public string RaporKodu { get; set; }
         public IzinTuru(string turad)
         {
             this.TurAdi = turad;
@@ -19,6 +20,6 @@ namespace EkDers.Entity.DbEntity
             
         }
 
-        public ICollection<Izin> Izins { get; set; }
+        public ICollection<OgretmenIzin> Izins { get; set; }
     }
 }

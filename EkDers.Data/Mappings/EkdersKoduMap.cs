@@ -16,7 +16,7 @@ namespace EkDers.Data.Mappings
         {
             builder.HasKey(x => x.Id);
             builder.Property(x=>x.Aciklama).HasMaxLength(500); 
-            builder.Property(x=>x.Kodu).HasMaxLength(100); 
+            builder.Property(x=>x.Kodu).HasMaxLength(10); 
             builder.Property(x=>x.KodAd).HasMaxLength(100); 
 
         }

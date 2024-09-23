@@ -19,15 +19,18 @@ namespace EkDers.Data.Context
             modelBuilder.Entity<Brans>().ToTable("Brans");
             modelBuilder.Entity<Donem>().ToTable("Donem");
             modelBuilder.Entity<EkdersKodu>().ToTable("EkdersKodu");
-            modelBuilder.Entity<EkdersResult>().ToTable("EkdersResult");
-            modelBuilder.Entity<Gorev>().ToTable("Gorev");
-            modelBuilder.Entity<Izin>().ToTable("Izin");
+            modelBuilder.Entity<RaporItem>().ToTable("RaporItem");
+            modelBuilder.Entity<Gorev>().ToTable("Gorev"); 
             modelBuilder.Entity<IzinTuru>().ToTable("IzinTuru");
+            modelBuilder.Entity<KariyerBasamagi>().ToTable("KariyerBasamagi");
             modelBuilder.Entity<KurumBilgi>().ToTable("KurumBilgi");
-            modelBuilder.Entity<Personel>().ToTable("Personel");
+            modelBuilder.Entity<MezuniyetTuru>().ToTable("MezuniyetTuru");
+            modelBuilder.Entity<Ogretmen>().ToTable("Ogretmen");
+            modelBuilder.Entity<OgretmenIzin>().ToTable("OgretmenIzin");
+            modelBuilder.Entity<OgretmenProgram>().ToTable("OgretmenProgram");
+            modelBuilder.Entity<ProgramGroup>().ToTable("ProgramGroup");
             modelBuilder.Entity<Tatil>().ToTable("Tatil");
-            modelBuilder.Entity<OgretmenHaftalikDersProgrami>().ToTable("OgretmenHaftalikDersProgrami");
-
+            
 
             
             
@@ -51,13 +54,13 @@ namespace EkDers.Data.Context
         public DbSet<Brans> Branslar { get; set; }
         public DbSet<Donem> Donemler { get; set; }
         public DbSet<EkdersKodu> EkDersKodlari { get; set; }
-        public DbSet<EkdersResult> EkDersResults { get; set; }
+        public DbSet<RaporItem> EkDersResults { get; set; }
         public DbSet<Gorev> Gorevler { get; set; }
-        public DbSet<Izin> Izinler { get; set; }
+        public DbSet<OgretmenIzin> Izinler { get; set; }
         public DbSet<IzinTuru> IzinTurleri { get; set; }
         public DbSet<KurumBilgi> KurumBilgileri { get; set; }
-        public DbSet<Personel> Personeller { get; set; }
+        public DbSet<Ogretmen> Personeller { get; set; }
         public DbSet<Tatil> Tatiller { get; set; }
-        public DbSet<OgretmenHaftalikDersProgrami> OgretmenDersProgramlari { get; set; }
-    }
+
+        }
 }

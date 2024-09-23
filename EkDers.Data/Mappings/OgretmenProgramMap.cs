@@ -10,15 +10,11 @@ using System.Threading.Tasks;
 
 namespace EkDers.Data.Mappings
 {
-    public class PersonelMap : IEntityTypeConfiguration<Personel>
+    public class OgretmenProgramMap : IEntityTypeConfiguration<OgretmenProgram>
     {
-        public void Configure(EntityTypeBuilder<Personel> builder)
+        public void Configure(EntityTypeBuilder<OgretmenProgram> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x=>x.Ad).HasMaxLength(50); 
-            builder.Property(x=>x.Soyad).HasMaxLength(50); 
-            builder.Property(x=>x.TCKN).HasMaxLength(50); 
-            builder.Property(x=>x.Telefon).HasMaxLength(500); 
 
         }
     }

@@ -16,7 +16,7 @@ namespace EkDers.Data.Mappings
         {
             builder.HasKey(x => x.Id);
             
-            builder.Property(x=>x.BransAdi).HasMaxLength(100); 
+            builder.Property(x=>x.BransAd).HasMaxLength(100); 
 
         }
     }

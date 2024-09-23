@@ -23,7 +23,7 @@ namespace EkDers.Entity.DbEntity
         public string Kodu { get; set; } 
         public string Aciklama { get; set; } 
 
-        public ICollection<EkdersResult> EkdersResults { get; set; }
+        public ICollection<OgretmenProgram> OgretmenPrograms { get; set; }
 
     }
 }

@@ -20,6 +20,6 @@ namespace EkDers.Entity.DbEntity
         }
         public string GorevAd { get; set; }
 
-        public ICollection<Personel> Personels { get; set; }
+        public ICollection<Ogretmen> Personels { get; set; }
     }
 }

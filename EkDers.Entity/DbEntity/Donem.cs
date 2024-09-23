@@ -20,7 +20,7 @@ namespace EkDers.Entity.DbEntity
             this.DonemYil = yil;
             this.DonemAy = ay;  
         }
-        public string  DonemAdi { get; set; }
+        public string  DonemAd { get; set; }
         
         public DateOnly DonemBaslangicTarihi { get; set; }
         public DateOnly DonemBitisTarihi { get; set; }
@@ -28,7 +28,7 @@ namespace EkDers.Entity.DbEntity
         public int DonemAy { get; set; }
        
 
-        public ICollection<EkdersResult> EkdersResults { get; set; }
+        public ICollection<RaporItem> EkdersResults { get; set; }
        
     }
 }

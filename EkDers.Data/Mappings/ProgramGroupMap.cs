@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 
 namespace EkDers.Data.Mappings
 {
-    public class IzinMap : IEntityTypeConfiguration<Izin>
+    public class ProgramGroupMap : IEntityTypeConfiguration<ProgramGroup>
     {
-        public void Configure(EntityTypeBuilder<Izin> builder)
+        public void Configure(EntityTypeBuilder<ProgramGroup> builder)
         {
             builder.HasKey(x => x.Id);
-            builder.Property(x=>x.Aciklama).HasMaxLength(500); 
-
+            builder.Property(x=>x.GroupAd).HasMaxLength(200); 
+            builder.Property(x=>x.Aciklama).HasMaxLength(500);  
         }
     }
 }

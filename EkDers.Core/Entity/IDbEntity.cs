@@ -10,7 +10,7 @@ namespace EkDers.Core.Entity
     {
           Guid Id { get; set; }
           DateTime CreateDate { get; set; }
-        bool IsDeleted { get; set; }
+             bool IsDeleted { get; set; }
         
 
     }

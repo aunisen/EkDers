@@ -15,5 +15,6 @@ namespace EkDers.Entity.DbEntity
         public bool Yarimgunvarmi { get; set; }
         public int GunSayisi { get; set; }
         public bool EkDersKesilirmi { get; set; }
+        public string RaporKodu { get; set; }
     }
 }

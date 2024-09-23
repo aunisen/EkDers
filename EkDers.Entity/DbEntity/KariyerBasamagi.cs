@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace EkDers.Entity.DbEntity
 {
-    public class KurumBilgi:DbEntityBase
+    public class KariyerBasamagi:DbEntityBase
     {
-        public string  Etiket { get; set; }
-        public string  Deger { get; set; }
-        public string  Aciklama { get; set; }
-      
+        public string Ad { get; set; }
+        public string Aciklama { get; set; }
+
+        public ICollection<Ogretmen> Ogretmens { get; set; }
     }
 }
