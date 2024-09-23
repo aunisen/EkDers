@@ -12,22 +12,18 @@ using System.Threading.Tasks;
 
 namespace EkDers.Service.Concrete
 {
-    public class ServiceManger<T> : IGenericServices<T> where T : class
+    public class GenericService<T> : IGenericServices<T> where T : class
         , IDbEntity,  new()
     {
-        private  IUnitOfWork<T> unitofwork;
+        private readonly IUnitOfWork<T> unitofwork;
         private  IRepository<T> repo;
 
-        public   ServiceManger(IUnitOfWork<T> unitOfWork)
+        public GenericService(IUnitOfWork<T> unitOfWork)
         {
             this.unitofwork = unitOfWork;
-           Setup();
+         
         }
-       async Task Setup()
-        {
-              repo = await  unitofwork.GetRepository<T>();
-            
-        }
+      
 
         public async Task<T> AddAsync(T entity)
         { 

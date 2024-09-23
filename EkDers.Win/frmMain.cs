@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EkDers.Entity.DbEntity;
+using EkDers.Win.Views.TanimlarViews.GorevIslemleriViews;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +16,12 @@ namespace EkDers.Win
         public frmMain()
         {
             InitializeComponent();
+        }
+
+        private void barButtonItemYeniGorev_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmYeniGorev gorev = new();
+            gorev.ShowDialog();   
         }
     }
 }

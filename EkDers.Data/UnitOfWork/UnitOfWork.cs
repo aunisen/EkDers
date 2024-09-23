@@ -17,7 +17,7 @@ namespace EkDers.Data.UnitOfWork
     public class UnitOfWork<T> : IUnitOfWork<T> where T:class,IDbEntity,new()
     {
         //public static ServiceProvider ServiceProvider { get; private set; }
-        private EkdersDbContext ekdersDbContext;
+        private readonly EkdersDbContext ekdersDbContext;
 
         public UnitOfWork()
         {
@@ -28,6 +28,7 @@ namespace EkDers.Data.UnitOfWork
         public async ValueTask DisposeAsync()
         {
             await Task.Run(() => { this.ekdersDbContext.Dispose(); });
+            GC.SuppressFinalize(this);
         }
 
         public async Task<int> SaveAsync()
