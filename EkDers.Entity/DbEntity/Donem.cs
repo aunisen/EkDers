@@ -9,17 +9,7 @@ namespace EkDers.Entity.DbEntity
 {
     public class Donem:DbEntityBase
     {
-        public Donem()
-        {
-            
-        }
-        public Donem(DateOnly baslangic, DateOnly bitis, int yil, int ay)
-        {
-            this.DonemBaslangicTarihi = baslangic;
-            this.DonemBitisTarihi = bitis;
-            this.DonemYil = yil;
-            this.DonemAy = ay;  
-        }
+        
         public string  DonemAd { get; set; }
         
         public DateOnly DonemBaslangicTarihi { get; set; }

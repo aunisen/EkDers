@@ -11,14 +11,7 @@ namespace EkDers.Entity.DbEntity
     {
         public string TurAdi { get; set; }
         public string RaporKodu { get; set; }
-        public IzinTuru(string turad)
-        {
-            this.TurAdi = turad;
-        }
-        public IzinTuru()
-        {
-            
-        }
+        
 
         public ICollection<OgretmenIzin> Izins { get; set; }
     }

@@ -9,16 +9,7 @@ namespace EkDers.Entity.DbEntity
 {
     public class EkdersKodu:DbEntityBase
     {
-        public EkdersKodu()
-        {
-            
-        }
-        public EkdersKodu(string kodad, string kod)
-        {
-            this.KodAd = kodad;
-            this.Kodu = kod;
-            
-        }
+       
         public string KodAd { get; set; }
         public string Kodu { get; set; } 
         public string Aciklama { get; set; } 

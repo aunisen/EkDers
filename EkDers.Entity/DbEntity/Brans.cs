@@ -13,13 +13,6 @@ namespace EkDers.Entity.DbEntity
         public string BransAd { get; set; }
         public ICollection<Ogretmen> Ogretmens { get; set; }
 
-        public Brans()
-        {
-
-        }
-        public Brans(string bransadi)
-        {
-            this.BransAd = bransadi;
-        }
+        
     }
 }
