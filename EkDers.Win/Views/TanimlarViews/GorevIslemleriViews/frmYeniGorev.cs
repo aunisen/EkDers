@@ -1,37 +1,35 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.Xpo;
+using EkDers.Data.Repositories.Concrete;
+using Dat=EkDers.Data.UnitOfWork;
 using EkDers.Entity.DbEntity;
-using EkDers.Service.Abstraction;
-using EkDers.Service.Concrete;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace EkDers.Win.Views.TanimlarViews.GorevIslemleriViews
 {
     public partial class frmYeniGorev : DevExpress.XtraEditors.XtraForm
     {
-        private  IGenericServices<Gorev> gorevManager;
-        public frmYeniGorev(IGenericServices<Gorev> gorevservice)
+       private readonly Dat.UnitOfWork unitofwork;
+        private   Repository<Gorev> repository;
+        public    frmYeniGorev()
         {
             InitializeComponent();
-            gorevManager = gorevservice;
-
+            unitofwork = new Dat.UnitOfWork();
+             
         }
-        public frmYeniGorev( )
-        {
-            InitializeComponent(); 
-
-        }
+        
 
         private void simpleButtonKaydet_Click(object sender, EventArgs e)
         {
-            gorevManager.AddAsync(new Gorev { GorevAd = textEditGorevAd.Text.Trim().ToUpper(), IsDeleted = false });
+            kaydet();
+        }
+
+
+        private async Task kaydet()
+        {
+            repository = await unitofwork.GetRepository<Gorev>();
+            await repository.AddAsync(new Gorev { GorevAd = textEditGorevAd.Text.Trim().ToUpper(), IsDeleted = false });
+            await unitofwork.SaveAsync();
             this.Close();
         }
     }

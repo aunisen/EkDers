@@ -1,20 +1,10 @@
 ﻿using EkDers.Core.Entity;
 using EkDers.Data.Context;
-using EkDers.Data.Repositories.Abstract;
 using EkDers.Data.Repositories.Concrete;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.VisualBasic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.Marshalling;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EkDers.Data.UnitOfWork
 {
-    public class UnitOfWork<T> : IUnitOfWork<T> where T:class,IDbEntity,new()
+    public class UnitOfWork : IUnitOfWork, IDisposable
     {
         //public static ServiceProvider ServiceProvider { get; private set; }
         private readonly EkdersDbContext ekdersDbContext;
@@ -36,11 +26,15 @@ namespace EkDers.Data.UnitOfWork
           return  await ekdersDbContext.SaveChangesAsync();
         }
 
-        public async Task<IRepository<T>> GetRepository<T>() where T : class,IDbEntity,new()   
+        public async Task<Repository<T>> GetRepository<T>() where T : class,IDbEntity,new()   
         {
            var result= await Task.Run(()=>new Repository<T>(ekdersDbContext));
             return result;
         }
- 
+
+        public void Dispose()
+        {
+            GC.SuppressFinalize(this);
+        }
     }
 }

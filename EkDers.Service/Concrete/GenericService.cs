@@ -15,12 +15,13 @@ namespace EkDers.Service.Concrete
     public class GenericService<T> : IGenericServices<T> where T : class
         , IDbEntity,  new()
     {
-        private readonly IUnitOfWork<T> unitofwork;
+        private readonly IUnitOfWork unitofwork;
         private  IRepository<T> repo;
 
-        public GenericService(IUnitOfWork<T> unitOfWork)
+        public     GenericService(IUnitOfWork unitOfWork)
         {
             this.unitofwork = unitOfWork;
+            repo =   unitofwork.GetRepository<T>().Result;
          
         }
       

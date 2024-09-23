@@ -21,7 +21,14 @@ namespace EkDers.Win
         private void barButtonItemYeniGorev_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmYeniGorev gorev = new();
-            gorev.ShowDialog();   
+            gorev.ShowDialog();
+        }
+
+        private void barButtonItemGorevListesi_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmGorevListesi grmgorevlistesi= new frmGorevListesi(); 
+             grmgorevlistesi.MdiParent = this;  
+            grmgorevlistesi.Show();   
         }
     }
 }

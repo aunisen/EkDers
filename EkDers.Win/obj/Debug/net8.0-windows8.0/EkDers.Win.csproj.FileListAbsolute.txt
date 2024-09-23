@@ -160,3 +160,4 @@ C:\Projeler\EkDers\EkDers.Win\bin\Debug\net8.0-windows8.0\EkDers.Core.pdb
 C:\Projeler\EkDers\EkDers.Win\bin\Debug\net8.0-windows8.0\EkDers.Data.pdb
 C:\Projeler\EkDers\EkDers.Win\bin\Debug\net8.0-windows8.0\EkDers.Entity.pdb
 C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.TanimlarViews.GorevIslemleriViews.frmYeniGorev.resources
+C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.TanimlarViews.GorevIslemleriViews.frmGorevListesi.resources

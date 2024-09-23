@@ -14,7 +14,7 @@ namespace EkDers.Data.Extensions
     {
         public static ServiceCollection LoadServices(this ServiceCollection collection)
         {
-            collection.AddScoped(typeof(IUnitOfWork<>),typeof(UnitOfWork<>));
+           // collection.AddScoped(typeof(IUnitOfWork<>),typeof(UnitOfWork<>));
             return collection;  
         }
     }

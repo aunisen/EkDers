@@ -5,6 +5,9 @@
     <Compile Update="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\TanimlarViews\GorevIslemleriViews\frmGorevListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\TanimlarViews\GorevIslemleriViews\frmYeniGorev.cs">
       <SubType>Form</SubType>
     </Compile>

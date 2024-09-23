@@ -68,6 +68,7 @@
             Controls.Add(labelControl1);
             FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             Name = "frmYeniGorev";
+            StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             Text = "Yeni Görev";
             ((System.ComponentModel.ISupportInitialize)textEditGorevAd.Properties).EndInit();
             ResumeLayout(false);

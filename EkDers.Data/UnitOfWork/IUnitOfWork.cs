@@ -1,5 +1,6 @@
 ﻿using EkDers.Core.Entity;
 using EkDers.Data.Repositories.Abstract;
+using EkDers.Data.Repositories.Concrete;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace EkDers.Data.UnitOfWork
 {
-    public interface IUnitOfWork<T>:IAsyncDisposable where T:class,IDbEntity,new()   
+    public interface IUnitOfWork:IAsyncDisposable    
     {
-       Task< IRepository<T>> GetRepository<T>() where T:class, IDbEntity, new();
+       Task<Repository<T>> GetRepository<T>() where T:class, IDbEntity, new();
         Task<int> SaveAsync();
     }
 }

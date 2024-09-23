@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             ribbonControl1 = new DevExpress.XtraBars.Ribbon.RibbonControl();
             barButtonItemYeniGorev = new DevExpress.XtraBars.BarButtonItem();
@@ -44,7 +45,9 @@
             ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPage5 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(components);
             ((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)xtraTabbedMdiManager1).BeginInit();
             SuspendLayout();
             // 
             // ribbonControl1
@@ -76,6 +79,7 @@
             barButtonItemGorevListesi.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("barButtonItemGorevListesi.ImageOptions.Image");
             barButtonItemGorevListesi.ImageOptions.LargeImage = (System.Drawing.Image)resources.GetObject("barButtonItemGorevListesi.ImageOptions.LargeImage");
             barButtonItemGorevListesi.Name = "barButtonItemGorevListesi";
+            barButtonItemGorevListesi.ItemClick += barButtonItemGorevListesi_ItemClick;
             // 
             // barButtonItemPersonelGorevListesi
             // 
@@ -148,17 +152,25 @@
             ribbonPageGroup5.Name = "ribbonPageGroup5";
             ribbonPageGroup5.Text = "ribbonPageGroup5";
             // 
+            // xtraTabbedMdiManager1
+            // 
+            xtraTabbedMdiManager1.ClosePageButtonShowMode = DevExpress.XtraTab.ClosePageButtonShowMode.InAllTabPageHeaders;
+            xtraTabbedMdiManager1.CloseTabOnMiddleClick = DevExpress.XtraTabbedMdi.CloseTabOnMiddleClick.Never;
+            xtraTabbedMdiManager1.MdiParent = this;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(1455, 756);
             Controls.Add(ribbonControl1);
+            IsMdiContainer = true;
             Margin = new System.Windows.Forms.Padding(4);
             Name = "frmMain";
             Ribbon = ribbonControl1;
             Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)ribbonControl1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)xtraTabbedMdiManager1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -180,6 +192,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItemGorevListesi;
         private DevExpress.XtraBars.BarButtonItem barButtonItemPersonelGorevListesi;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup6;
+        private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager xtraTabbedMdiManager1;
     }
 }
 
