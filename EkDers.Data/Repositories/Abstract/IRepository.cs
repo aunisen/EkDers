@@ -14,6 +14,7 @@ namespace EkDers.Data.Repositories.Abstract
        Task< IList<T>> GetAllAsync(Expression<Func<T, bool>> expression, params Expression<Func<T, bool>>[] includeproperties);
         Task<T> GetAsync(Expression<Func<T, bool>> expression, params Expression<Func<T, bool>>[] includeproperties);
         Task<T> GetByIdAsync(Guid Id, params Expression<Func<T, bool>>[] includeproperties);
+        Task<bool> Any(Expression<Func<T, bool>> filter);
         Task<T> AddAsync(T entity);
         Task<T> UpdateAsync(T entity);
         Task<bool> DeleteAsync(T entity);

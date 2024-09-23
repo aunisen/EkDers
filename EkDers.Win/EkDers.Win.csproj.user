@@ -5,10 +5,34 @@
     <Compile Update="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\TanimlarViews\BransIslemleriViews\frmBransListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TanimlarViews\BransIslemleriViews\frmYeniBrans.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TanimlarViews\EkDersKodlari\frmEkdersKodListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TanimlarViews\EkDersKodlari\frmYeniEkdersKodu.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\TanimlarViews\GorevIslemleriViews\frmGorevListesi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\TanimlarViews\GorevIslemleriViews\frmYeniGorev.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TanimlarViews\IzinTatilIslemleri\frmIzinTuruListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TanimlarViews\IzinTatilIslemleri\frmTatillerListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TanimlarViews\IzinTatilIslemleri\frmYeniIzin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\TanimlarViews\IzinTatilIslemleri\frmYeniTatil.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

@@ -31,7 +31,13 @@ namespace EkDers.Data.Repositories.Concrete
             return result.Entity;
         }
 
-       public async Task<bool>  DeleteAsync(T entity)
+        public Task<bool> Any(Expression<Func<T, bool>> filter)
+        {
+           return GetTable.AnyAsync(filter);
+            
+        }
+
+        public async Task<bool>  DeleteAsync(T entity)
         {
              var result=Task.Run(()=>GetTable.Remove(entity));
             return result.IsFaulted;

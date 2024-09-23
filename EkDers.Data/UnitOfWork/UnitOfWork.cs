@@ -1,6 +1,7 @@
 ﻿using EkDers.Core.Entity;
 using EkDers.Data.Context;
 using EkDers.Data.Repositories.Concrete;
+using Microsoft.EntityFrameworkCore.Migrations.Operations;
 
 namespace EkDers.Data.UnitOfWork
 {
@@ -36,5 +37,7 @@ namespace EkDers.Data.UnitOfWork
         {
             GC.SuppressFinalize(this);
         }
+
+      
     }
 }

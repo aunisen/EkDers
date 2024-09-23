@@ -4,6 +4,7 @@ using EkDers.Data.Repositories.Abstract;
 using EkDers.Data.Repositories.Concrete;
 using EkDers.Data.UnitOfWork;
 using EkDers.Entity.DbEntity;
+using EkDers.Win.Controllers.Mesaj;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,10 +48,25 @@ namespace EkDers.Win.Views.TanimlarViews.GorevIslemleriViews
         }
 
         private async Task kaydet()
-        { 
-            await gorevRepo.AddAsync(new Gorev { GorevAd = textEdit1.Text.Trim().ToUpper(), IsDeleted = false });
-            await unitOfWork.SaveAsync();
-            await ListAll2();   
+        {
+
+            string gorevad = textEdit1.Text.Trim();
+
+            gorevRepo = await unitOfWork.GetRepository<Gorev>();
+            if (!await gorevRepo.Any(c => c.GorevAd.ToLower() == gorevad.Trim().ToLower()))
+            {
+                await gorevRepo.AddAsync(new Gorev { GorevAd = gorevad.Trim().ToUpper(), IsDeleted = false });
+                await unitOfWork.SaveAsync();
+               await ListAll2();
+            }
+            else
+            {
+                
+                MesajController.UyariMesajiver("Kayıt Başarısız", $"{gorevad} zaten kayılı.");
+            }
+          
+
+
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)

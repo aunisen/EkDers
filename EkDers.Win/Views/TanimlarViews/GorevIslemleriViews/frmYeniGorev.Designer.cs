@@ -62,7 +62,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(498, 141);
+            ClientSize = new System.Drawing.Size(498, 133);
             Controls.Add(simpleButtonKaydet);
             Controls.Add(textEditGorevAd);
             Controls.Add(labelControl1);

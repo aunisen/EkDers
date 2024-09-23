@@ -54,28 +54,28 @@
             panelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             panelControl1.Location = new System.Drawing.Point(0, 0);
             panelControl1.Name = "panelControl1";
-            panelControl1.Size = new System.Drawing.Size(405, 926);
+            panelControl1.Size = new System.Drawing.Size(350, 553);
             panelControl1.TabIndex = 0;
             // 
             // simpleButton1
             // 
-            simpleButton1.Location = new System.Drawing.Point(254, 124);
+            simpleButton1.Location = new System.Drawing.Point(220, 106);
             simpleButton1.Name = "simpleButton1";
-            simpleButton1.Size = new System.Drawing.Size(122, 51);
+            simpleButton1.Size = new System.Drawing.Size(100, 50);
             simpleButton1.TabIndex = 2;
             simpleButton1.Text = "Kaydet";
             simpleButton1.Click += simpleButton1_Click;
             // 
             // textEdit1
             // 
-            textEdit1.Location = new System.Drawing.Point(12, 92);
+            textEdit1.Location = new System.Drawing.Point(20, 65);
             textEdit1.Name = "textEdit1";
-            textEdit1.Size = new System.Drawing.Size(364, 26);
+            textEdit1.Size = new System.Drawing.Size(300, 26);
             textEdit1.TabIndex = 1;
             // 
             // labelControl1
             // 
-            labelControl1.Location = new System.Drawing.Point(12, 67);
+            labelControl1.Location = new System.Drawing.Point(20, 40);
             labelControl1.Name = "labelControl1";
             labelControl1.Size = new System.Drawing.Size(42, 19);
             labelControl1.TabIndex = 0;
@@ -85,9 +85,9 @@
             // 
             panelControl2.Controls.Add(gridControl1);
             panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            panelControl2.Location = new System.Drawing.Point(405, 0);
+            panelControl2.Location = new System.Drawing.Point(350, 0);
             panelControl2.Name = "panelControl2";
-            panelControl2.Size = new System.Drawing.Size(1284, 926);
+            panelControl2.Size = new System.Drawing.Size(848, 553);
             panelControl2.TabIndex = 0;
             // 
             // gridControl1
@@ -96,7 +96,7 @@
             gridControl1.Location = new System.Drawing.Point(2, 2);
             gridControl1.MainView = gridView1;
             gridControl1.Name = "gridControl1";
-            gridControl1.Size = new System.Drawing.Size(1280, 922);
+            gridControl1.Size = new System.Drawing.Size(844, 549);
             gridControl1.TabIndex = 0;
             gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
             // 
@@ -134,7 +134,7 @@
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1689, 926);
+            ClientSize = new System.Drawing.Size(1198, 553);
             Controls.Add(panelControl2);
             Controls.Add(panelControl1);
             Name = "frmGorevListesi";
