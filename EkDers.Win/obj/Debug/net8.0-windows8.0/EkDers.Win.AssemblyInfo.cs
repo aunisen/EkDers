@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EkDers.Win")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5002cc5ae8b5d55b7c922a5bd73cc3a258a32a0e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5f947f5c4acfd5ccad78e43b9debfbeb01c6a87c")]
 [assembly: System.Reflection.AssemblyProductAttribute("EkDers.Win")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EkDers.Win")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
