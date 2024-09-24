@@ -65,8 +65,8 @@
             ribbonPageGroup5 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonStatusBar1 = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             xtraTabbedMdiManager1 = new DevExpress.XtraTabbedMdi.XtraTabbedMdiManager(components);
-            defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(components);
             toastNotificationsManager1 = new DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager(components);
+            defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(components);
             ((System.ComponentModel.ISupportInitialize)ribbonControl1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)xtraTabbedMdiManager1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)toastNotificationsManager1).BeginInit();
@@ -347,6 +347,10 @@
             // 
             toastNotificationsManager1.ApplicationId = "ec13818a-5dfc-45c0-8064-d6ec714bafff";
             // 
+            // defaultLookAndFeel1
+            // 
+            defaultLookAndFeel1.EnableBonusSkins = true;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -395,7 +399,6 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup8;
         private DevExpress.XtraBars.BarButtonItem barButtonItem9;
         private DevExpress.XtraBars.Ribbon.RibbonStatusBar ribbonStatusBar1;
-        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem10;
         private DevExpress.XtraBars.BarButtonItem barButtonItem11;
         private DevExpress.XtraBars.BarButtonItem barButtonItem12;
@@ -406,6 +409,7 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup10;
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager toastNotificationsManager1;
+        private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
     }
 }
 

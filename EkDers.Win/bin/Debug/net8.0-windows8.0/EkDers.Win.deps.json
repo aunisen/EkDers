@@ -10,7 +10,8 @@
         "dependencies": {
           "DevExpress.Win.Design": "22.2.3",
           "EkDers.Service": "1.0.0",
-          "Microsoft.Extensions.DependencyInjection": "8.0.0"
+          "Microsoft.Extensions.DependencyInjection": "8.0.0",
+          "DevExpress.BonusSkins.v22.2": "22.2.3.0"
         },
         "runtime": {
           "EkDers.Win.dll": {}
@@ -1974,6 +1975,14 @@
         "runtime": {
           "EkDers.Service.dll": {}
         }
+      },
+      "DevExpress.BonusSkins.v22.2/22.2.3.0": {
+        "runtime": {
+          "DevExpress.BonusSkins.v22.2.dll": {
+            "assemblyVersion": "22.2.3.0",
+            "fileVersion": "22.2.3.0"
+          }
+        }
       }
     }
   },
@@ -3036,6 +3045,11 @@
     },
     "EkDers.Service/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DevExpress.BonusSkins.v22.2/22.2.3.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     }

@@ -1,17 +1,9 @@
-﻿using EkDers.Entity.DbEntity;
-using EkDers.Win.Controllers.Mesaj;
+﻿using EkDers.Win.Controllers.Mesaj;
 using EkDers.Win.Views.TanimlarViews.BransIslemleriViews;
 using EkDers.Win.Views.TanimlarViews.EkDersKodlari;
 using EkDers.Win.Views.TanimlarViews.GorevIslemleriViews;
 using EkDers.Win.Views.TanimlarViews.IzinTatilIslemleri;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
 
 namespace EkDers.Win
 {
@@ -20,7 +12,7 @@ namespace EkDers.Win
         public frmMain()
         {
             InitializeComponent();
-            DevExpress.LookAndFeel.UserLookAndFeel.Default.SetSkinStyle(skinName: "WXI Compact", DevExpress.LookAndFeel.WXICompact.WXICompact);
+            
         }
 
         private void barButtonItemYeniGorev_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

@@ -2,6 +2,10 @@
 using System;
 using System.Reflection;
 using System.Windows.Forms;
+using DevExpress.Skins;
+using DevExpress.LookAndFeel;
+using DevExpress.UserSkins;
+
 
 namespace EkDers.Win
 {
@@ -15,12 +19,11 @@ namespace EkDers.Win
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-           
+            BonusSkins.Register();
+            UserLookAndFeel.Default.SetSkinStyle(SkinStyle.WXICompact);
+             
 
-          
-
-            Application.SetCompatibleTextRenderingDefault(false);
+            Application.SetCompatibleTextRenderingDefault(false); 
             Application.Run(new frmMain());
         }
     }
