@@ -19,6 +19,8 @@ namespace EkDers.Win.Views.GirisViews.OgretmenIslemleriViews
         {
             InitializeComponent();
             ogrRepos = new OgretmenRepository();
+            gridView1.OptionsSelection.MultiSelect = true;
+            gridView1.OptionsSelection.MultiSelectMode = DevExpress.XtraGrid.Views.Grid.GridMultiSelectMode.CheckBoxRowSelect;
             Listele();
         }
 
