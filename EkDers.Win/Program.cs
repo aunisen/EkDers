@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 using DevExpress.UserSkins;
+using EkDers.Win.Views.GirisViews.OgretmenIslemleriViews;
 
 
 namespace EkDers.Win
@@ -24,7 +25,7 @@ namespace EkDers.Win
              
 
             Application.SetCompatibleTextRenderingDefault(false); 
-            Application.Run(new frmMain());
+            Application.Run(new frmYeniOgretmen());
         }
     }
 }

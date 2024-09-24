@@ -18,7 +18,7 @@ namespace EkDers.Win.Views.TanimlarViews.IzinTatilIslemleri
     public partial class frmIzinTuruListesi : DevExpress.XtraEditors.XtraForm
     {
         private readonly UnitOfWork unitOfWork;
-        private Repository<IzinTuru> repository;
+        private RepositoryAsnync<IzinTuru> repository;
         public frmIzinTuruListesi()
         {
             InitializeComponent();

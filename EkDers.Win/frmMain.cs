@@ -83,13 +83,8 @@ namespace EkDers.Win
 
         private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-          var mesaj=  MesajController.GetToastNotification("Yeni Öğretmen Tanımlama", "Yeni öğretmen tanımlayacaksan bizimlesin.");
-            mesaj.ID=Guid.NewGuid();
-            toastNotificationsManager1.Notifications.Add(mesaj);
-
-
-
-            toastNotificationsManager1.ShowNotification(mesaj.ID);
+            frmYeniTatil frm = new();
+            frm.ShowDialog();
         }
     }
 }

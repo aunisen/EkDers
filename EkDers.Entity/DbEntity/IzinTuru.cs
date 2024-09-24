@@ -14,5 +14,10 @@ namespace EkDers.Entity.DbEntity
         
 
         public ICollection<OgretmenIzin> Izins { get; set; }
+
+        public override string ToString()
+        {
+            return $"{TurAdi}";
+        }
     }
 }

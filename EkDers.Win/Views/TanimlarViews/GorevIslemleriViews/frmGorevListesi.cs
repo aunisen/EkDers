@@ -20,7 +20,7 @@ namespace EkDers.Win.Views.TanimlarViews.GorevIslemleriViews
     public partial class frmGorevListesi : DevExpress.XtraEditors.XtraForm
     {
         private readonly UnitOfWork unitOfWork;
-        private   Repository<Gorev> gorevRepo;
+        private   RepositoryAsnync<Gorev> gorevRepo;
         public frmGorevListesi()
         {
             InitializeComponent();

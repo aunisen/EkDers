@@ -16,5 +16,11 @@ namespace EkDers.Entity.DbEntity
         public int GunSayisi { get; set; }
         public bool EkDersKesilirmi { get; set; }
         public string RaporKodu { get; set; }
+
+
+        public override string ToString()
+        {
+            return $"{TatilAd}";
+        }
     }
 }

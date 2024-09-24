@@ -12,7 +12,7 @@ namespace EkDers.Data.UnitOfWork
 {
     public interface IUnitOfWork:IAsyncDisposable    
     {
-       Task<Repository<T>> GetRepository<T>() where T:class, IDbEntity, new();
+       Task<RepositoryAsnync<T>> GetRepository<T>() where T:class, IDbEntity, new();
         Task<int> SaveAsync();
     }
 }

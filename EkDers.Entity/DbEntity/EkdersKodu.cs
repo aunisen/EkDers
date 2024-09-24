@@ -16,5 +16,9 @@ namespace EkDers.Entity.DbEntity
 
         public ICollection<OgretmenProgram> OgretmenPrograms { get; set; }
 
+        public override string ToString()
+        {
+            return $"{Kodu} - {KodAd}";
+        }
     }
 }

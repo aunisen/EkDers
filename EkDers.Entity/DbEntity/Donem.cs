@@ -19,6 +19,12 @@ namespace EkDers.Entity.DbEntity
        
 
         public ICollection<RaporItem> EkdersResults { get; set; }
-       
+
+        public override string ToString()
+        {
+            return DonemAd;
+        }
+
+
     }
 }

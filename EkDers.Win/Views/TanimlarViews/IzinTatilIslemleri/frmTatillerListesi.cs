@@ -18,7 +18,7 @@ namespace EkDers.Win.Views.TanimlarViews.IzinTatilIslemleri
     public partial class frmTatillerListesi : DevExpress.XtraEditors.XtraForm
     {
         private readonly UnitOfWork unitOfWork;
-        private Repository<Tatil> repository;
+        private RepositoryAsnync<Tatil> repository;
         public frmTatillerListesi()
         {
             InitializeComponent();

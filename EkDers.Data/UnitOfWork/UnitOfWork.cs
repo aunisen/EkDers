@@ -24,12 +24,21 @@ namespace EkDers.Data.UnitOfWork
 
         public async Task<int> SaveAsync()
         {
-          return  await ekdersDbContext.SaveChangesAsync();
+            try
+            {
+                return await ekdersDbContext.SaveChangesAsync();
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
-        public async Task<Repository<T>> GetRepository<T>() where T : class,IDbEntity,new()   
+        public async Task<RepositoryAsnync<T>> GetRepository<T>() where T : class,IDbEntity,new()   
         {
-           var result= await Task.Run(()=>new Repository<T>(ekdersDbContext));
+           var result= await Task.Run(()=>new RepositoryAsnync<T>(ekdersDbContext));
             return result;
         }
 

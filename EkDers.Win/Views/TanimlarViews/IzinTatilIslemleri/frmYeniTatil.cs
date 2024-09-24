@@ -21,7 +21,7 @@ namespace EkDers.Win.Views.TanimlarViews.IzinTatilIslemleri
     public partial class frmYeniTatil : DevExpress.XtraEditors.XtraForm
     {
         private readonly UnitOfWork unitOfWork;
-        private Repository<Tatil> repository;
+        private RepositoryAsnync<Tatil> repository;
         public frmYeniTatil()
         {
             InitializeComponent();

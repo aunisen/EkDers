@@ -18,7 +18,7 @@ namespace EkDers.Win.Views.TanimlarViews.EkDersKodlari
     public partial class frmYeniEkdersKodu : DevExpress.XtraEditors.XtraForm
     {
         private readonly UnitOfWork unitOfWork;
-        private Repository<EkdersKodu> repository;
+        private RepositoryAsnync<EkdersKodu> repository;
         public frmYeniEkdersKodu()
         {
             InitializeComponent();

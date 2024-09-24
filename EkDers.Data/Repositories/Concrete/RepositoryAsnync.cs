@@ -14,12 +14,12 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace EkDers.Data.Repositories.Concrete
 {
-    public class Repository<T> : IRepository<T> where T : class, IDbEntity,new()
+    public class RepositoryAsnync<T> : IRepository<T> where T : class, IDbEntity,new()
     {
        
         
         private readonly EkdersDbContext _dbContext;
-        public Repository(EkdersDbContext ekdersDbContext)
+        public RepositoryAsnync(EkdersDbContext ekdersDbContext)
         {
             _dbContext = ekdersDbContext; 
         }

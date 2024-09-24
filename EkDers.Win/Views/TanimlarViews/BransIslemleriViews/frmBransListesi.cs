@@ -18,7 +18,7 @@ namespace EkDers.Win.Views.TanimlarViews.BransIslemleriViews
     public partial class frmBransListesi : DevExpress.XtraEditors.XtraForm
     {
         private readonly UnitOfWork unitOfWork;
-        private Repository<Brans> repository;
+        private RepositoryAsnync<Brans> repository;
         public frmBransListesi()
         {
             InitializeComponent();

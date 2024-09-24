@@ -13,5 +13,10 @@ namespace EkDers.Entity.DbEntity
         public string Aciklama { get; set; }
 
         public ICollection<Ogretmen> Ogretmens { get; set; }
+
+        public override string ToString()
+        {
+            return Ad;
+        }
     }
 }

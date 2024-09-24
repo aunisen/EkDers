@@ -333,3 +333,13 @@ C:\ProjectsCSharp\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.pdb
 C:\ProjectsCSharp\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.genruntimeconfig.cache
 C:\ProjectsCSharp\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\ref\EkDers.Win.dll
 C:\ProjectsCSharp\EkDers\EkDers.Win\bin\Debug\net8.0-windows8.0\DevExpress.BonusSkins.v22.2.dll
+C:\Projeler\EkDers\EkDers.Win\bin\Debug\net8.0-windows8.0\DevExpress.BonusSkins.v22.2.dll
+C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.TanimlarViews.BransIslemleriViews.frmBransListesi.resources
+C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.TanimlarViews.BransIslemleriViews.frmYeniBrans.resources
+C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.TanimlarViews.EkDersKodlari.frmEkdersKodListesi.resources
+C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.TanimlarViews.EkDersKodlari.frmYeniEkdersKodu.resources
+C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.TanimlarViews.IzinTatilIslemleri.frmIzinTuruListesi.resources
+C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.TanimlarViews.IzinTatilIslemleri.frmTatillerListesi.resources
+C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.TanimlarViews.IzinTatilIslemleri.frmYeniIzin.resources
+C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.TanimlarViews.IzinTatilIslemleri.frmYeniTatil.resources
+C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.GirisViews.OgretmenIslemleriViews.frmYeniOgretmen.resources

@@ -11,7 +11,7 @@ namespace EkDers.Win.Views.TanimlarViews.GorevIslemleriViews
     public partial class frmYeniGorev : DevExpress.XtraEditors.XtraForm
     {
        private readonly Dat.UnitOfWork unitofwork;
-        private   Repository<Gorev> repository;
+        private   RepositoryAsnync<Gorev> repository;
         public    frmYeniGorev()
         {
             InitializeComponent();
