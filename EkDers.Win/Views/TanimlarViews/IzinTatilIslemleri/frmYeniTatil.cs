@@ -1,48 +1,35 @@
-﻿using DevExpress.Utils.Extensions;
-using DevExpress.Utils.MVVM;
-using DevExpress.XtraEditors;
-using DevExpress.XtraEditors.Controls;
-using EkDers.Data.Repositories.Concrete;
-using EkDers.Data.UnitOfWork;
+﻿using EkDers.Data.Repositories.Concrete;
 using EkDers.Entity.DbEntity;
 using EkDers.Win.Controllers.Mesaj;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace EkDers.Win.Views.TanimlarViews.IzinTatilIslemleri
 {
     public partial class frmYeniTatil : DevExpress.XtraEditors.XtraForm
     {
-        private readonly UnitOfWork unitOfWork;
-        private RepositoryAsnync<Tatil> repository;
+        
+        private TatilRepository repository;
         public frmYeniTatil()
         {
             InitializeComponent();
-            unitOfWork = new();
+           repository = new TatilRepository();
             SetSettings();
         }
 
-        private async Task SetSettings()
+        private void SetSettings()
         {
             comboBoxEditTur.Properties.Items.Add("Resmi Tatil");
             comboBoxEditTur.Properties.Items.Add("Dini Bayram"); 
             comboBoxEditTur.Properties.Items.Add("İdari İzinli"); 
             comboBoxEditTur.Properties.Items.Add("Kar Tatili"); 
 
-            repository=await unitOfWork.GetRepository<Tatil>();
+             
             textEditAd.Focus();
             checkEditYarimgun_CheckedChanged(null, null);
             checkEditEkdersKesilirmi_CheckedChanged(null, null);
         }
 
-       private async Task Kaydet()
+       private void Kaydet()
         {
             var tatilad = textEditAd.Text;
             var gunsayis = spinEditGunSayisi.Value;
@@ -51,13 +38,13 @@ namespace EkDers.Win.Views.TanimlarViews.IzinTatilIslemleri
                 MesajController.UyariMesajiver("Zorunlu Alanlar", "Tatil Adı, Gün Sayısı, Başlangıç Tarihi zorunlu alanlardır.");
                 return;
             }
-            if(await repository.Any(c => c.TatilAd.ToLower() == tatilad.ToLower()))
+            if(repository.Any(c => c.TatilAd.ToLower() == tatilad.ToLower()))
             {
                 MesajController.HataMesajiver("Kayıt Hatası", $"{tatilad} zaten kayıtlıdır.");
             }
             else
             {
-               await repository.AddAsync(new Tatil {EkDersKesilirmi=checkEditEkdersKesilirmi.Checked, 
+                 repository.Add(new Tatil {EkDersKesilirmi=checkEditEkdersKesilirmi.Checked, 
                     BaslangicTarihi=new DateOnly(dateEditBaslangicTarihi.DateTime.Date.Year,
                     dateEditBaslangicTarihi.DateTime.Date.Month, 
                     dateEditBaslangicTarihi.DateTime.Date.Day),
@@ -66,7 +53,7 @@ namespace EkDers.Win.Views.TanimlarViews.IzinTatilIslemleri
                     TatilTuru=comboBoxEditTur.SelectedItem.ToString(), 
                     Yarimgunvarmi=checkEditYarimgun.Checked, 
                     TatilAd=tatilad.ToUpper()  });
-                await unitOfWork.SaveAsync();
+                
                 
             }
             this.Close();

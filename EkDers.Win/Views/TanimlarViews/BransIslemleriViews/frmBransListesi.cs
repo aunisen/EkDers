@@ -1,28 +1,18 @@
-﻿using DevExpress.XtraEditors;
-using EkDers.Data.Repositories.Concrete;
-using EkDers.Data.UnitOfWork;
+﻿using EkDers.Data.Repositories.Concrete;
 using EkDers.Entity.DbEntity;
 using EkDers.Win.Controllers.Mesaj;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace EkDers.Win.Views.TanimlarViews.BransIslemleriViews
 {
     public partial class frmBransListesi : DevExpress.XtraEditors.XtraForm
     {
-        private readonly UnitOfWork unitOfWork;
-        private RepositoryAsnync<Brans> repository;
+        
+        private readonly BransRepository repository;
         public frmBransListesi()
         {
             InitializeComponent();
-            unitOfWork = new();
+            repository = new BransRepository(); 
             ListAll();
         }
 
@@ -30,40 +20,31 @@ namespace EkDers.Win.Views.TanimlarViews.BransIslemleriViews
         {
             kaydet();
         }
-        public async Task SetupSettings()
-        {
-            
-            repository = await unitOfWork.GetRepository<Brans>();
-        }
+       
 
-        public async Task ListAll()
-        {
-            await SetupSettings();
-            var liste = await repository.GetAllAsync();
-            gridControl1.DataSource = liste;
+        public void ListAll()
+        { 
+            gridControl1.DataSource = repository.GetAll();
             textEdit1.Clear();
             textEdit1.Focus();  
         }
-        public async Task ListAll2()
-        {
-
-            var liste = await repository.GetAllAsync();
-            gridControl1.DataSource = liste;
+        public void ListAll2()
+        { 
+            gridControl1.DataSource = repository.GetAll();
             textEdit1.Clear();
             textEdit1.Focus();
         }
 
-        private async Task kaydet()
+        private void kaydet()
         {
 
             string bransad = textEdit1.Text.Trim();
 
-            repository = await unitOfWork.GetRepository<Brans>();
-            if (!await repository.Any(c => c.BransAd.ToLower() == bransad.Trim().ToLower()))
+           
+            if (! repository.Any(c => c.BransAd.ToLower() == bransad.Trim().ToLower()))
             {
-                await repository.AddAsync(new Brans { BransAd = bransad.Trim().ToUpper(), IsDeleted = false });
-                await unitOfWork.SaveAsync();
-                await ListAll2();
+                repository.Add(new Brans { BransAd = bransad.Trim().ToUpper(), IsDeleted = false });
+                ListAll2();
             }
             else
             {

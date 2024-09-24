@@ -1,21 +1,19 @@
-﻿using DevExpress.Xpo;
-using EkDers.Data.Repositories.Concrete;
-using Dat=EkDers.Data.UnitOfWork;
+﻿using EkDers.Data.Repositories.Concrete;
 using EkDers.Entity.DbEntity;
+using EkDers.Win.Controllers.Mesaj;
 using System;
 using System.Threading.Tasks; 
-using EkDers.Win.Controllers.Mesaj;
 
 namespace EkDers.Win.Views.TanimlarViews.GorevIslemleriViews
 {
     public partial class frmYeniGorev : DevExpress.XtraEditors.XtraForm
     {
-       private readonly Dat.UnitOfWork unitofwork;
-        private   RepositoryAsnync<Gorev> repository;
+       
+        private   GorevRepository repository;
         public    frmYeniGorev()
         {
-            InitializeComponent();
-            unitofwork = new Dat.UnitOfWork();
+            InitializeComponent(); 
+            repository = new GorevRepository(); 
             textEditGorevAd.Focus();
              
         }
@@ -23,19 +21,19 @@ namespace EkDers.Win.Views.TanimlarViews.GorevIslemleriViews
 
         private void simpleButtonKaydet_Click(object sender, EventArgs e)
         {
-            kaydet();
+            Kaydet();
         }
 
 
-        private async Task kaydet()
+        private void Kaydet()
         {
             string gorevad = textEditGorevAd.Text.Trim();
 
-            repository = await unitofwork.GetRepository<Gorev>();
-            if (!await repository.Any(c => c.GorevAd.ToLower() == gorevad.Trim().ToLower()))
+          
+            if (!repository.Any(c => c.GorevAd.ToLower() == gorevad.Trim().ToLower()))
             {
-                await repository.AddAsync(new Gorev { GorevAd = gorevad.Trim().ToUpper(), IsDeleted = false });
-                await unitofwork.SaveAsync();
+                repository.Add(new Gorev { GorevAd = gorevad.Trim().ToUpper(), IsDeleted = false });
+              
                 textEditGorevAd.Clear();
                 textEditGorevAd.Focus();
             }
