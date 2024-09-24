@@ -1,4 +1,6 @@
 ﻿using EkDers.Win.Controllers.Mesaj;
+using EkDers.Win.Views.GirisViews;
+using EkDers.Win.Views.GirisViews.DonemIslemleri;
 using EkDers.Win.Views.GirisViews.OgretmenIslemleriViews;
 using EkDers.Win.Views.TanimlarViews.BransIslemleriViews;
 using EkDers.Win.Views.TanimlarViews.EkDersKodlari;
@@ -91,7 +93,14 @@ namespace EkDers.Win
 
         private void barButtonItem13_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            frmOgretmenListesi frm = new(); 
+            frmOgretmenListesi frm = new();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void barButtonItem10_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmYeniDonem frm = new();
             frm.MdiParent = this;
             frm.Show();
         }

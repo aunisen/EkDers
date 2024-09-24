@@ -6,6 +6,9 @@ using DevExpress.Skins;
 using DevExpress.LookAndFeel;
 using DevExpress.UserSkins;
 using EkDers.Win.Views.GirisViews.OgretmenIslemleriViews;
+using EkDers.Win.Views.GirisViews;
+using DevExpress.XtraEditors;
+using EkDers.Win.Views.GirisViews.DonemIslemleri;
 
 
 namespace EkDers.Win
@@ -20,12 +23,20 @@ namespace EkDers.Win
         [STAThread]
         static void Main()
         {
+ 
+             SkinManager.EnableFormSkins();
+            Application.EnableVisualStyles(); 
             BonusSkins.Register();
-            UserLookAndFeel.Default.SetSkinStyle(SkinStyle.WXICompact);
-             
+           // UserLookAndFeel.Default.SetSkinStyle(SkinStyle.WXICompact);
+            UserLookAndFeel.Default.SetSkinStyle(SkinStyle.WXI);
+            Application.EnableVisualStyles();
 
-            Application.SetCompatibleTextRenderingDefault(false); 
-            Application.Run(new frmMain());
+
+            Application.SetCompatibleTextRenderingDefault(false);
+            WindowsFormsSettings.EnableMdiFormSkins();
+
+            var frm =new  frmMain();
+            Application.Run(frm);
         }
     }
 }

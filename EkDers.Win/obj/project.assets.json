@@ -7297,24 +7297,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CannX\\.nuget\\packages\\": {},
-    "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages": {}
+    "C:\\Users\\bixbi\\.nuget\\packages\\": {},
+    "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projeler\\EkDers\\EkDers.Win\\EkDers.Win.csproj",
+      "projectUniqueName": "C:\\ProjectsCSharp\\EkDers\\EkDers.Win\\EkDers.Win.csproj",
       "projectName": "EkDers.Win",
-      "projectPath": "C:\\Projeler\\EkDers\\EkDers.Win\\EkDers.Win.csproj",
-      "packagesPath": "C:\\Users\\CannX\\.nuget\\packages\\",
-      "outputPath": "C:\\Projeler\\EkDers\\EkDers.Win\\obj\\",
+      "projectPath": "C:\\ProjectsCSharp\\EkDers\\EkDers.Win\\EkDers.Win.csproj",
+      "packagesPath": "C:\\Users\\bixbi\\.nuget\\packages\\",
+      "outputPath": "C:\\ProjectsCSharp\\EkDers\\EkDers.Win\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages"
+        "C:\\Program Files\\DevExpress 22.2\\Components\\Offline Packages",
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\CannX\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\bixbi\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.2.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7323,14 +7326,15 @@
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Program Files\\DevExpress 22.2\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-windows8.0": {
           "targetAlias": "net8.0-windows8.0",
           "projectReferences": {
-            "C:\\Projeler\\EkDers\\EkDers.Service\\EkDers.Service.csproj": {
-              "projectPath": "C:\\Projeler\\EkDers\\EkDers.Service\\EkDers.Service.csproj"
+            "C:\\ProjectsCSharp\\EkDers\\EkDers.Service\\EkDers.Service.csproj": {
+              "projectPath": "C:\\ProjectsCSharp\\EkDers\\EkDers.Service\\EkDers.Service.csproj"
             }
           }
         }
@@ -7339,6 +7343,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -7373,7 +7382,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

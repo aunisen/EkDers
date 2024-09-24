@@ -5,6 +5,9 @@
     <Compile Update="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\GirisViews\DonemIslemleri\frmYeniDonem.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\GirisViews\OgretmenIslemleriViews\frmOgretmenListesi.cs">
       <SubType>Form</SubType>
     </Compile>

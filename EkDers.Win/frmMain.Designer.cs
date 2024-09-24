@@ -185,6 +185,7 @@
             barButtonItem10.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("barButtonItem10.ImageOptions.Image");
             barButtonItem10.ImageOptions.LargeImage = (System.Drawing.Image)resources.GetObject("barButtonItem10.ImageOptions.LargeImage");
             barButtonItem10.Name = "barButtonItem10";
+            barButtonItem10.ItemClick += barButtonItem10_ItemClick;
             // 
             // barButtonItem11
             // 
@@ -411,6 +412,12 @@
         private DevExpress.XtraBars.SkinRibbonGalleryBarItem skinRibbonGalleryBarItem1;
         private DevExpress.XtraBars.ToastNotifications.ToastNotificationsManager toastNotificationsManager1;
         private DevExpress.LookAndFeel.DefaultLookAndFeel defaultLookAndFeel1;
+        private DevExpress.XtraBars.Navigation.NavigationFrame navigationFrame1;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage1;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage2;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage3;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage4;
+        private DevExpress.XtraBars.Navigation.NavigationPage navigationPage5;
     }
 }
 

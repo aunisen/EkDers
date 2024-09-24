@@ -346,3 +346,8 @@ C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.Giris
 C:\Projeler\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.GirisViews.OgretmenIslemleriViews.frmOgretmenListesi.resources
 C:\Projeler\EkDers\EkDers.Win\bin\Debug\net8.0-windows8.0\Castle.Core.dll
 C:\Projeler\EkDers\EkDers.Win\bin\Debug\net8.0-windows8.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\ProjectsCSharp\EkDers\EkDers.Win\bin\Debug\net8.0-windows8.0\Castle.Core.dll
+C:\ProjectsCSharp\EkDers\EkDers.Win\bin\Debug\net8.0-windows8.0\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\ProjectsCSharp\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.GirisViews.OgretmenIslemleriViews.frmOgretmenListesi.resources
+C:\ProjectsCSharp\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.GirisViews.OgretmenIslemleriViews.frmYeniOgretmen.resources
+C:\ProjectsCSharp\EkDers\EkDers.Win\obj\Debug\net8.0-windows8.0\EkDers.Win.Views.GirisViews.DonemIslemleri.frmYeniDonem.resources
