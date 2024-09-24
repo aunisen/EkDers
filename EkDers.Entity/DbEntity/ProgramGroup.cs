@@ -12,6 +12,6 @@ namespace EkDers.Entity.DbEntity
         public string GroupAd { get; set; }
         public string Aciklama { get; set; }
         public DateOnly BaslangicTarihi { get; set; }
-        public ICollection<OgretmenProgram> OgretmenPrograms { get; set; }
+        public virtual ICollection<OgretmenProgram> OgretmenPrograms { get; set; }
     }
 }

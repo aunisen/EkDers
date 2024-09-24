@@ -12,9 +12,9 @@ namespace EkDers.Entity.DbEntity
        
         public string KodAd { get; set; }
         public string Kodu { get; set; } 
-        public string Aciklama { get; set; } 
+        public string Aciklama { get; set; }
 
-        public ICollection<OgretmenProgram> OgretmenPrograms { get; set; }
+        public virtual ICollection<OgretmenProgram> OgretmenPrograms { get; set; }
 
         public override string ToString()
         {

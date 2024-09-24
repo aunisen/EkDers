@@ -12,7 +12,7 @@ namespace EkDers.Entity.DbEntity
       
         public string GorevAd { get; set; }
 
-        public ICollection<Ogretmen> Personels { get; set; }
+        public virtual ICollection<Ogretmen> Personels { get; set; }
 
         public override string ToString()
         {

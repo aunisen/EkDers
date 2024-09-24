@@ -210,6 +210,7 @@
             barButtonItem13.ImageOptions.Image = (System.Drawing.Image)resources.GetObject("barButtonItem13.ImageOptions.Image");
             barButtonItem13.ImageOptions.LargeImage = (System.Drawing.Image)resources.GetObject("barButtonItem13.ImageOptions.LargeImage");
             barButtonItem13.Name = "barButtonItem13";
+            barButtonItem13.ItemClick += barButtonItem13_ItemClick;
             // 
             // barButtonItem3
             // 

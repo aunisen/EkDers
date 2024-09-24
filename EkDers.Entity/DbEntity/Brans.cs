@@ -11,7 +11,7 @@ namespace EkDers.Entity.DbEntity
     public class Brans : DbEntityBase
     {
         public string BransAd { get; set; }
-        public ICollection<Ogretmen> Ogretmens { get; set; }
+        public virtual ICollection<Ogretmen> Ogretmens { get; set; }
 
         public override string ToString()
         {

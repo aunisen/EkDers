@@ -11,9 +11,9 @@ namespace EkDers.Entity.DbEntity
     {
         public string TurAdi { get; set; }
         public string RaporKodu { get; set; }
-        
 
-        public ICollection<OgretmenIzin> Izins { get; set; }
+
+        public virtual ICollection<OgretmenIzin> Izins { get; set; }
 
         public override string ToString()
         {

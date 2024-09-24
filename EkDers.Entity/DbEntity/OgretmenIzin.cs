@@ -18,10 +18,10 @@ namespace EkDers.Entity.DbEntity
 
 
         public Guid IzinTuruId { get; set; }
-        public IzinTuru IzinTuru { get; set; }
+        public virtual IzinTuru IzinTuru { get; set; }
 
-        public Guid OgretmenId { get; set; } 
-        public Ogretmen Ogretmen { get; set; }
+        public Guid OgretmenId { get; set; }
+        public virtual Ogretmen Ogretmen { get; set; }
          
     }
 }

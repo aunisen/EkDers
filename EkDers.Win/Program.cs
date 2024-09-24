@@ -25,7 +25,7 @@ namespace EkDers.Win
              
 
             Application.SetCompatibleTextRenderingDefault(false); 
-            Application.Run(new frmYeniOgretmen());
+            Application.Run(new frmMain());
         }
     }
 }

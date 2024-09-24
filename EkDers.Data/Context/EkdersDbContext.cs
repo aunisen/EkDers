@@ -45,8 +45,7 @@ namespace EkDers.Data.Context
         {
             string _connectionStringLocalDb = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=EkdersDbV2; Integrated Security=True;Trusted_Certificate=True";
             string _connectionStringSqlServer = @"Data Source=.;Initial Catalog=EkdersDbV2; Integrated Security=True; TrustServerCertificate=True;";
-          
-            optionsBuilder.UseSqlServer(_connectionStringSqlServer);
+          optionsBuilder.UseLazyLoadingProxies().UseSqlServer(_connectionStringSqlServer);
             
         }
 

@@ -16,17 +16,17 @@ namespace EkDers.Entity.DbEntity
         public string Telefon { get; set; }
         public string Email { get; set; }
         public Guid GorevId { get; set; }
-        public Gorev Gorev { get; set; }
+        public virtual Gorev Gorev { get; set; }
         public Guid BransId { get; set; }
-        public Brans Brans { get; set; }
+        public virtual Brans Brans { get; set; }
         public Guid MezuniyetTuruId { get; set; }
-        public MezuniyetTuru MezuniyetTuru { get; set; }
+        public virtual MezuniyetTuru MezuniyetTuru { get; set; }
 
         public Guid KariyerBasamagiId { get; set; }
-        public KariyerBasamagi KariyerBasamagi { get; set; }
+        public virtual KariyerBasamagi KariyerBasamagi { get; set; }
 
-        public ICollection<OgretmenProgram> Programs { get; set; }
-        public ICollection<OgretmenIzin> OgretmenIzins { get; set; }
-        public ICollection<RaporItem> EkdersResults { get; set; }
+        public virtual ICollection<OgretmenProgram> Programs { get; set; }
+        public virtual ICollection<OgretmenIzin> OgretmenIzins { get; set; }
+        public virtual ICollection<RaporItem> EkdersResults { get; set; }
     }
 }

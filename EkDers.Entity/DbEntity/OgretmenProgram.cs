@@ -10,13 +10,13 @@ namespace EkDers.Entity.DbEntity
     public class OgretmenProgram:DbEntityBase
     {
         public Guid ProgramGroupId { get; set; }
-        public ProgramGroup ProgramGroup { get; set; }
+        public virtual ProgramGroup ProgramGroup { get; set; }
 
         public Guid OgretmenId { get; set; }
-        public Ogretmen Ogretmen { get; set; }
+        public virtual Ogretmen Ogretmen { get; set; }
 
         public Guid EkdersKoduId { get; set; }
-        public EkdersKodu EkdersKodu { get; set; } 
+        public virtual EkdersKodu EkdersKodu { get; set; } 
 
         public int PazartesiDersSaati { get; set; }
         public int SaliDersSaati { get; set; }

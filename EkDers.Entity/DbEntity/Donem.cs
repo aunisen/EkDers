@@ -18,7 +18,7 @@ namespace EkDers.Entity.DbEntity
         public int DonemAy { get; set; }
        
 
-        public ICollection<RaporItem> EkdersResults { get; set; }
+        public virtual ICollection<RaporItem> EkdersResults { get; set; }
 
         public override string ToString()
         {
