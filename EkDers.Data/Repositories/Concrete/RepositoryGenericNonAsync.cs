@@ -48,7 +48,9 @@ namespace EkDers.Data.Repositories.Concrete
                 foreach (var property in includeproperties)
                     query.Include(property);
             }
-            return  query.ToList();
+           return query.AsNoTracking().ToList();
+              
+            
              
         }
 

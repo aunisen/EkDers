@@ -104,5 +104,19 @@ namespace EkDers.Win
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmYeniOgretmenProgrami frm = new();
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void barButtonItemYeniOgretmenProgramGrubu_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmYeniProgramGrup frm = new();
+            frm.MdiParent = this;
+            frm.Show();
+        }
     }
 }

@@ -18,6 +18,9 @@ namespace EkDers.Data.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("ProductVersion", "8.0.8")
+                .HasAnnotation("Proxies:ChangeTracking", false)
+                .HasAnnotation("Proxies:CheckEquality", false)
+                .HasAnnotation("Proxies:LazyLoading", true)
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -135,21 +138,21 @@ namespace EkDers.Data.Migrations
                         new
                         {
                             Id = new Guid("0c30e774-4b13-4ec4-b354-157728ffb11c"),
-                            CreateDate = new DateTime(2024, 9, 23, 15, 42, 43, 366, DateTimeKind.Local).AddTicks(6469),
+                            CreateDate = new DateTime(2024, 9, 25, 1, 18, 52, 695, DateTimeKind.Local).AddTicks(9692),
                             GorevAd = "Müdür",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("3b4dcbef-c723-40be-b73e-19cd09604c59"),
-                            CreateDate = new DateTime(2024, 9, 23, 15, 42, 43, 366, DateTimeKind.Local).AddTicks(6488),
+                            CreateDate = new DateTime(2024, 9, 25, 1, 18, 52, 695, DateTimeKind.Local).AddTicks(9719),
                             GorevAd = "Müdür Yardımcısı",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("35084397-55c0-47bb-b1fe-17f02ff27601"),
-                            CreateDate = new DateTime(2024, 9, 23, 15, 42, 43, 366, DateTimeKind.Local).AddTicks(6489),
+                            CreateDate = new DateTime(2024, 9, 25, 1, 18, 52, 695, DateTimeKind.Local).AddTicks(9721),
                             GorevAd = "Öğretmen",
                             IsDeleted = false
                         });
@@ -296,8 +299,14 @@ namespace EkDers.Data.Migrations
                     b.Property<Guid>("KariyerBasamagiId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<bool>("KulubuVarmi")
+                        .HasColumnType("bit");
+
                     b.Property<Guid>("MezuniyetTuruId")
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("SinifOgretmenligiVarmi")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Soyad")
                         .IsRequired()
@@ -377,10 +386,7 @@ namespace EkDers.Data.Migrations
                     b.Property<int>("CarsambaDersSaati")
                         .HasColumnType("int");
 
-                    b.Property<int>("CarsambaEkdersSaati")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CarsambaYazilacakEkdersSaati")
+                    b.Property<int>("CarsambaEkDersSaati")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreateDate")
@@ -389,22 +395,13 @@ namespace EkDers.Data.Migrations
                     b.Property<int>("CumaDersSaati")
                         .HasColumnType("int");
 
-                    b.Property<int>("CumaEkdersSaati")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CumaYazilacakEkdersSaati")
+                    b.Property<int>("CumaEkDersSaati")
                         .HasColumnType("int");
 
                     b.Property<int>("CumartesiDersSaati")
                         .HasColumnType("int");
 
-                    b.Property<int>("CumartesiEkdersSaati")
-                        .HasColumnType("int");
-
-                    b.Property<int>("CumartesiYazilacakEkdersSaati")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DerseHazrilikEkdersSaati")
+                    b.Property<int>("CumartesiEkDersSaati")
                         .HasColumnType("int");
 
                     b.Property<Guid>("EkdersKoduId")
@@ -413,43 +410,25 @@ namespace EkDers.Data.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<int>("NobetEkdersSaati")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NobetGunIndex")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("NobetTutuyormu")
-                        .HasColumnType("bit");
-
                     b.Property<Guid>("OgretmenId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("PazarDersSaati")
                         .HasColumnType("int");
 
-                    b.Property<int>("PazarEkdersSaati")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PazarYazilacakEkdersSaati")
+                    b.Property<int>("PazarEkDersSaati")
                         .HasColumnType("int");
 
                     b.Property<int>("PazartesiDersSaati")
                         .HasColumnType("int");
 
-                    b.Property<int>("PazartesiEkdersSaati")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PazartesiYazilacakEkdersSaati")
+                    b.Property<int>("PazartesiEkDersSaati")
                         .HasColumnType("int");
 
                     b.Property<int>("PersembeDersSaati")
                         .HasColumnType("int");
 
-                    b.Property<int>("PersembeEkdersSaati")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PersembeYazilacakEkdersSaati")
+                    b.Property<int>("PersembeEkDersSaati")
                         .HasColumnType("int");
 
                     b.Property<Guid>("ProgramGroupId")
@@ -458,17 +437,8 @@ namespace EkDers.Data.Migrations
                     b.Property<int>("SaliDersSaati")
                         .HasColumnType("int");
 
-                    b.Property<int>("SaliEkdersSaati")
+                    b.Property<int>("SaliEkDersSaati")
                         .HasColumnType("int");
-
-                    b.Property<int>("SaliYazilacakEkdersSaati")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SinifOgremenligiKlupDersSaati")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("SinifOgremenligiKlupGoreviVarmi")
-                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -492,6 +462,9 @@ namespace EkDers.Data.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
+                    b.Property<bool>("AktifProgramMi")
+                        .HasColumnType("bit");
+
                     b.Property<DateOnly>("BaslangicTarihi")
                         .HasColumnType("date");
 
@@ -505,6 +478,10 @@ namespace EkDers.Data.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("ProgramKodu")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

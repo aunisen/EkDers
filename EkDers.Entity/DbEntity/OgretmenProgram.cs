@@ -25,27 +25,15 @@ namespace EkDers.Entity.DbEntity
         public int CumaDersSaati { get; set; }
         public int CumartesiDersSaati { get; set; }
         public int PazarDersSaati { get; set; }
-        public int PazartesiEkdersSaati { get; set; }
-        public int SaliEkdersSaati { get; set; }
-        public int CarsambaEkdersSaati { get; set; }
-        public int PersembeEkdersSaati { get; set; }
-        public int CumaEkdersSaati { get; set; }
-        public int CumartesiEkdersSaati { get; set; }
-        public int PazarEkdersSaati { get; set; }
-        public int DerseHazrilikEkdersSaati { get; set; }
-        public int NobetGunIndex { get; set; }
-        public int NobetEkdersSaati { get; set; }
-        public bool NobetTutuyormu { get; set; }
-        public int SinifOgremenligiKlupDersSaati { get; set; }
-        public bool SinifOgremenligiKlupGoreviVarmi { get; set; }
 
-        public int PazartesiYazilacakEkdersSaati { get; set; }
-        public int SaliYazilacakEkdersSaati { get; set; }
-        public int CarsambaYazilacakEkdersSaati { get; set; }
-        public int PersembeYazilacakEkdersSaati { get; set; }
-        public int CumaYazilacakEkdersSaati { get; set; }
-        public int CumartesiYazilacakEkdersSaati { get; set; }
-        public int PazarYazilacakEkdersSaati { get; set; }
+        public int PazartesiEkDersSaati { get; set; }
+        public int SaliEkDersSaati { get; set; }
+        public int CarsambaEkDersSaati { get; set; }
+        public int PersembeEkDersSaati { get; set; }
+        public int CumaEkDersSaati { get; set; }
+        public int CumartesiEkDersSaati { get; set; }
+        public int PazarEkDersSaati { get; set; }
+
 
 
 

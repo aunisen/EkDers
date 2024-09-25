@@ -48,6 +48,8 @@
             barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             barButtonItem14 = new DevExpress.XtraBars.BarButtonItem();
             skinRibbonGalleryBarItem1 = new DevExpress.XtraBars.SkinRibbonGalleryBarItem();
+            barButtonItem15 = new DevExpress.XtraBars.BarButtonItem();
+            barButtonItemYeniOgretmenProgramGrubu = new DevExpress.XtraBars.BarButtonItem();
             ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ribbonPageGroup9 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -77,10 +79,10 @@
             ribbonControl1.ApplicationCaption = "Ek Ders Studio";
             ribbonControl1.EmptyAreaImageOptions.ImagePadding = new System.Windows.Forms.Padding(45, 44, 45, 44);
             ribbonControl1.ExpandCollapseItem.Id = 0;
-            ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, ribbonControl1.SearchEditItem, barButtonItemYeniGorev, barButtonItemGorevListesi, barButtonItem1, barButtonItem2, barButtonItem4, barButtonItem5, barButtonItem6, barButtonItem7, barButtonItem8, barButtonItem9, barButtonItem10, barButtonItem11, barButtonItem12, barButtonItem13, barButtonItem3, barButtonItem14, skinRibbonGalleryBarItem1 });
+            ribbonControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { ribbonControl1.ExpandCollapseItem, ribbonControl1.SearchEditItem, barButtonItemYeniGorev, barButtonItemGorevListesi, barButtonItem1, barButtonItem2, barButtonItem4, barButtonItem5, barButtonItem6, barButtonItem7, barButtonItem8, barButtonItem9, barButtonItem10, barButtonItem11, barButtonItem12, barButtonItem13, barButtonItem3, barButtonItem14, skinRibbonGalleryBarItem1, barButtonItem15, barButtonItemYeniOgretmenProgramGrubu });
             ribbonControl1.Location = new System.Drawing.Point(0, 0);
             ribbonControl1.Margin = new System.Windows.Forms.Padding(4);
-            ribbonControl1.MaxItemId = 21;
+            ribbonControl1.MaxItemId = 23;
             ribbonControl1.Name = "ribbonControl1";
             ribbonControl1.OptionsMenuMinWidth = 495;
             ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] { ribbonPage1, ribbonPage2, ribbonPage3, ribbonPage4, ribbonPage5 });
@@ -235,6 +237,22 @@
             skinRibbonGalleryBarItem1.Id = 20;
             skinRibbonGalleryBarItem1.Name = "skinRibbonGalleryBarItem1";
             // 
+            // barButtonItem15
+            // 
+            barButtonItem15.Caption = "Yeni Öğretmen Programı";
+            barButtonItem15.Id = 21;
+            barButtonItem15.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItem15.ImageOptions.SvgImage");
+            barButtonItem15.Name = "barButtonItem15";
+            barButtonItem15.ItemClick += barButtonItem15_ItemClick;
+            // 
+            // barButtonItemYeniOgretmenProgramGrubu
+            // 
+            barButtonItemYeniOgretmenProgramGrubu.Caption = "Yeni Öğretmen Program Grubu";
+            barButtonItemYeniOgretmenProgramGrubu.Id = 22;
+            barButtonItemYeniOgretmenProgramGrubu.ImageOptions.SvgImage = (DevExpress.Utils.Svg.SvgImage)resources.GetObject("barButtonItemYeniOgretmenProgramGrubu.ImageOptions.SvgImage");
+            barButtonItemYeniOgretmenProgramGrubu.Name = "barButtonItemYeniOgretmenProgramGrubu";
+            barButtonItemYeniOgretmenProgramGrubu.ItemClick += barButtonItemYeniOgretmenProgramGrubu_ItemClick;
+            // 
             // ribbonPage1
             // 
             ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] { ribbonPageGroup1, ribbonPageGroup9, ribbonPageGroup10 });
@@ -253,6 +271,8 @@
             ribbonPageGroup9.ItemLinks.Add(barButtonItem12);
             ribbonPageGroup9.ItemLinks.Add(barButtonItem13);
             ribbonPageGroup9.ItemLinks.Add(barButtonItem3);
+            ribbonPageGroup9.ItemLinks.Add(barButtonItem15, true);
+            ribbonPageGroup9.ItemLinks.Add(barButtonItemYeniOgretmenProgramGrubu);
             ribbonPageGroup9.Name = "ribbonPageGroup9";
             ribbonPageGroup9.Text = "Ögretmen İşlemleri";
             // 
@@ -418,6 +438,8 @@
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage3;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage4;
         private DevExpress.XtraBars.Navigation.NavigationPage navigationPage5;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem15;
+        private DevExpress.XtraBars.BarButtonItem barButtonItemYeniOgretmenProgramGrubu;
     }
 }
 
