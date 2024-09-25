@@ -74,6 +74,8 @@ namespace EkDers.Win.Views.GirisViews.OgretmenIslemleriViews
                 var programGrup = (comboBoxEditProgramGroup.SelectedItem as ProgramGroup);
 
 
+                 
+
                 OgretmenProgram program = new();
                 program.PazartesiDersSaati = int.Parse(textEditPazartesi.Text.Trim());
                 program.PazartesiEkDersSaati = int.Parse(textEditPazartesiEkders.Text.Trim());
@@ -96,6 +98,8 @@ namespace EkDers.Win.Views.GirisViews.OgretmenIslemleriViews
 
                 programRepo.Add(program);
 
+               
+
                 Listele();
                 ClearAll();
 
@@ -110,7 +114,10 @@ namespace EkDers.Win.Views.GirisViews.OgretmenIslemleriViews
         private void comboBoxEditOgretmen_SelectedIndexChanged(object sender, EventArgs e)
         {
             var ogretmen = (comboBoxEditOgretmen.SelectedItem as Ogretmen);
-            gridControl1.DataSource = programRepo.GetOgretmenProgarms(ogretmen.Id);
+            if (ogretmen == null) return;
+            var programlistesi= programRepo.GetOgretmenProgarms(ogretmen.Id);
+            gridControl1.DataSource = programlistesi;
+            gridControl1.RefreshDataSource();
         }
     }
 }

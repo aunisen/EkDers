@@ -30,6 +30,7 @@ namespace EkDers.Data.Context
             modelBuilder.Entity<OgretmenProgram>().ToTable("OgretmenProgram");
             modelBuilder.Entity<ProgramGroup>().ToTable("ProgramGroup");
             modelBuilder.Entity<Tatil>().ToTable("Tatil");
+            modelBuilder.Entity<OgretmenGorev>().ToTable("OgretmenGorev");
             
 
             
@@ -64,6 +65,7 @@ namespace EkDers.Data.Context
         public DbSet<Tatil> Tatiller { get; set; }
         public DbSet<ProgramGroup> ProgramGrouplari { get; set; }
         public DbSet<MezuniyetTuru> MezuniyetTurleri { get; set; }
+        public DbSet<OgretmenGorev> OgretmenGorevleri { get; set; }
 
 
         }

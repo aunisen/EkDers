@@ -35,7 +35,7 @@ namespace EkDers.Win
             Application.SetCompatibleTextRenderingDefault(false);
             WindowsFormsSettings.EnableMdiFormSkins();
 
-            var frm =new  frmYeniOgretmenProgrami();
+            var frm =new  frmMain();
             Application.Run(frm);
         }
     }

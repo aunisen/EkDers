@@ -30,6 +30,7 @@ namespace EkDers.Entity.DbEntity
         public virtual ICollection<OgretmenProgram> Programs { get; set; }
         public virtual ICollection<OgretmenIzin> OgretmenIzins { get; set; }
         public virtual ICollection<RaporItem> EkdersResults { get; set; }
+        public virtual ICollection<OgretmenGorev> OgretmenGorevs { get; set; }
 
         public override string ToString()
         {

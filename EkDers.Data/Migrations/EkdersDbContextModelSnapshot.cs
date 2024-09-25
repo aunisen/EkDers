@@ -138,21 +138,21 @@ namespace EkDers.Data.Migrations
                         new
                         {
                             Id = new Guid("0c30e774-4b13-4ec4-b354-157728ffb11c"),
-                            CreateDate = new DateTime(2024, 9, 25, 1, 18, 52, 695, DateTimeKind.Local).AddTicks(9692),
+                            CreateDate = new DateTime(2024, 9, 25, 12, 24, 29, 173, DateTimeKind.Local).AddTicks(7515),
                             GorevAd = "Müdür",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("3b4dcbef-c723-40be-b73e-19cd09604c59"),
-                            CreateDate = new DateTime(2024, 9, 25, 1, 18, 52, 695, DateTimeKind.Local).AddTicks(9719),
+                            CreateDate = new DateTime(2024, 9, 25, 12, 24, 29, 173, DateTimeKind.Local).AddTicks(7533),
                             GorevAd = "Müdür Yardımcısı",
                             IsDeleted = false
                         },
                         new
                         {
                             Id = new Guid("35084397-55c0-47bb-b1fe-17f02ff27601"),
-                            CreateDate = new DateTime(2024, 9, 25, 1, 18, 52, 695, DateTimeKind.Local).AddTicks(9721),
+                            CreateDate = new DateTime(2024, 9, 25, 12, 24, 29, 173, DateTimeKind.Local).AddTicks(7535),
                             GorevAd = "Öğretmen",
                             IsDeleted = false
                         });
@@ -334,6 +334,45 @@ namespace EkDers.Data.Migrations
                     b.HasIndex("MezuniyetTuruId");
 
                     b.ToTable("Ogretmen", (string)null);
+                });
+
+            modelBuilder.Entity("EkDers.Entity.DbEntity.OgretmenGorev", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("DanismaniOlduguKulup")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("KulupOgretmenligiVarmi")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("NobetGoreviVarmi")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("OgretmenId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("SinifOgretmeniOlduguSinif")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("SinifOgretmenligiVarmi")
+                        .HasColumnType("bit");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OgretmenId");
+
+                    b.ToTable("OgretmenGorev", (string)null);
                 });
 
             modelBuilder.Entity("EkDers.Entity.DbEntity.OgretmenIzin", b =>
@@ -607,6 +646,17 @@ namespace EkDers.Data.Migrations
                     b.Navigation("MezuniyetTuru");
                 });
 
+            modelBuilder.Entity("EkDers.Entity.DbEntity.OgretmenGorev", b =>
+                {
+                    b.HasOne("EkDers.Entity.DbEntity.Ogretmen", "Ogretmen")
+                        .WithMany("OgretmenGorevs")
+                        .HasForeignKey("OgretmenId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Ogretmen");
+                });
+
             modelBuilder.Entity("EkDers.Entity.DbEntity.OgretmenIzin", b =>
                 {
                     b.HasOne("EkDers.Entity.DbEntity.IzinTuru", "IzinTuru")
@@ -718,6 +768,8 @@ namespace EkDers.Data.Migrations
             modelBuilder.Entity("EkDers.Entity.DbEntity.Ogretmen", b =>
                 {
                     b.Navigation("EkdersResults");
+
+                    b.Navigation("OgretmenGorevs");
 
                     b.Navigation("OgretmenIzins");
 
